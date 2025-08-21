@@ -27,7 +27,7 @@ const images = [
 
 function MarqueeImagesSection() {
     return (
-        <div className="w-full bg-gray-100 flex items-center justify-center pt-48 pb-10 border border-green">
+        <div className="w-full bg-gray-100 flex items-center justify-center pt-48 pb-10">
             <Marquee
                 gradient={false}
                 speed={60}

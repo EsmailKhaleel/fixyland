@@ -11,10 +11,10 @@ function NavbarTopBar() {
             </ul>
 
             <div className="flex gap-8 text-xl">
-                <FaFacebook className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer" />
-                <FaXTwitter className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer" />
-                <FaInstagram className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer" />
-                <FaBehance className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer" />
+                <FaFacebook className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
+                <FaXTwitter className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
+                <FaInstagram className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
+                <FaBehance className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
             </div>
         </div>
     )
