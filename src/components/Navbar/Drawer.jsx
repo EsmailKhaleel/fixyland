@@ -19,7 +19,7 @@ function Drawer({ setIsDrawerOpen }) {
         animate={{ x: 0 }}
         exit={{ x: '100%' }}
         transition={{ type: "spring", damping: 20, stiffness: 100, duration: 0.3, delay: 0.3 }}
-        className="w-[30%] ml-auto flex flex-col h-full bg-[#E8F3F0] overflow-x-hidden"
+        className="w-[90%] md:w-[40%] lg:w-[30%] ml-auto flex flex-col h-full bg-[#E8F3F0] overflow-x-hidden"
       >
         <div className=" flex flex-col min-h-full">
           <button
