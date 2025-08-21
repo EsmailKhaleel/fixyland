@@ -18,13 +18,14 @@ function Drawer({ setIsDrawerOpen }) {
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
         exit={{ x: '100%' }}
+        onClick={(e) => e.stopPropagation()}
         transition={{ type: "spring", damping: 20, stiffness: 100, duration: 0.3, delay: 0.3 }}
         className="w-[90%] md:w-[40%] lg:w-[30%] ml-auto flex flex-col h-full bg-[#E8F3F0] overflow-x-hidden"
       >
         <div className=" flex flex-col min-h-full">
           <button
             onClick={() => setIsDrawerOpen(false)}
-            className="absolute top-2 right-2 text-2xl text-gray-800 hover:text-primary transition-colors skew-1 transform"
+            className="bg-[#daf5ee] cursor-pointer z-10 p-2 rounded-full absolute top-2 right-4 text-2xl text-gray-800 hover:text-primary focus:text-primary transition-colors skew-1 transform"
           >
             <CgClose className="text-primary text-4xl" />
           </button>

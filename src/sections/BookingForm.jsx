@@ -1,3 +1,4 @@
+import { FaCalendar } from "react-icons/fa"
 import MainButton from "../components/ui/MainButton"
 
 function BookingForm() {
@@ -7,24 +8,36 @@ function BookingForm() {
         <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 px-4 md:px-8 lg:px-16">
           <div className="flex flex-col gap-2">
             <label htmlFor="CheckIn" className="font-medium">Check In</label>
-            <input
-              type="date"
-              id="CheckIn"
-              name="CheckIn"
-              placeholder="Select Date" 
-              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
-            />
+            <div className="relative">
+              <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
+                <FaCalendar className="text-gray-400"/>
+              </div>
+              <input
+                datepicker="true"
+                id="CheckIn"
+                name="CheckIn"
+                type="text"
+                placeholder="Select Date" 
+                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+              />
+            </div>
           </div>
           
           <div className="flex flex-col gap-2">
             <label htmlFor="CheckOut" className="font-medium">Check Out</label>
-            <input
-              type="date"
-              id="CheckOut"
-              name="CheckOut"
-              placeholder="Select Date" 
-              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
-            />
+            <div className="relative">
+              <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
+                <FaCalendar className="text-gray-400"/>
+              </div>
+              <input
+                datepicker="true"
+                id="CheckOut"
+                name="CheckOut"
+                type="text"
+                placeholder="Select Date" 
+                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+              />
+            </div>
           </div>
           
           <div className="flex flex-col gap-2">

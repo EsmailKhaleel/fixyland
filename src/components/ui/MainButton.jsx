@@ -26,18 +26,18 @@ function MainButton({
 
   return (
     <button
-      className={`relative overflow-hidden min-w-[200px] group text-md font-medium px-6 py-4 rounded-sm transition cursor-pointer flex justify-between items-center gap-3 ${bgColors[color]} ${textColors[textColor]}`}
+      className={`relative overflow-hidden min-w-[200px] group text-md font-medium px-6 py-4 rounded-sm transition cursor-pointer flex justify-between items-center gap-3 ${bgColors[color]} ${textColors[textColor]} active:touch-none`}
       onClick={onClick}
     >
-      <span className={`${bgColors[colorHover]} absolute z-0 inset-0 origin-left scale-x-0 transform transition-transform duration-400 group-hover:scale-x-100`}/>
+      <span className={`${bgColors[colorHover]} absolute z-0 inset-0 origin-left scale-x-0 transform transition-transform duration-400 group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100`}/>
       <span
-        className="bg-black/85 absolute z-10 inset-0 origin-left scale-x-0 transform transition-all duration-400 group-hover:scale-x-100 group-hover:opacity-0"
+        className="bg-black/85 absolute z-10 inset-0 origin-left scale-x-0 transform transition-all duration-400 group-hover:scale-x-100 group-hover:opacity-0 group-focus:scale-x-100 group-focus:opacity-0 group-active:scale-x-100 group-active:opacity-0"
         aria-hidden="true"
       />
       <span className={`relative z-20 transition-colors duration-500 ${hoverTextColors[textColorHover]}`}>
         {label}
       </span>
-      <FaArrowRightLong className={`${hoverTextColors[textColorHover]} relative z-20 transform -rotate-45 transition-all duration-700 group-hover:rotate-0`} />
+      <FaArrowRightLong className={`${hoverTextColors[textColorHover]} relative z-20 transform -rotate-45 transition-all duration-700 group-hover:rotate-0 group-focus:rotate-0 group-active:rotate-0`} />
     </button>
   );
 }

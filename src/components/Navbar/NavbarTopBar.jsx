@@ -14,7 +14,7 @@ function NavbarTopBar() {
                 {[FaFacebook, FaXTwitter, FaInstagram, FaBehance].map((Icon, index) =>
                 (<Icon
                     key={index}
-                    className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10"
+                    className="hover:text-secondary focus:text-secondary transition-colors duration-500 ease-in cursor-pointer z-50"
                 />))}
             </div>
         </div>

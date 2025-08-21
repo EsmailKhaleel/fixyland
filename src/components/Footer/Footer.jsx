@@ -23,7 +23,7 @@ function Footer() {
                             {[FaFacebook, FaXTwitter, FaInstagram, FaBehance].map((Icon, index) => (
                                 <div
                                     key={index}
-                                    className="bg-white/5 hover:bg-primary rounded-sm p-3 cursor-pointer transition-colors duration-300 ease-in-out"
+                                    className="bg-white/5 focus:bg-primary hover:bg-primary rounded-sm p-3 cursor-pointer transition-colors duration-300 ease-in-out"
                                 >
 
                                     <Icon
@@ -38,11 +38,11 @@ function Footer() {
                     <FadeIn direction="left" delay={0.4} className="">
                         <h3 className="text-2xl font-bold mb-6">EXPLORE</h3>
                         <ul className="space-y-3">
-                            <li><a href="#about" className="text-sm text-gray-600 hover:text-white transition hover-underline">About Hotel</a></li>
-                            <li><a href="#pricing" className="text-sm text-gray-600 hover:text-white transition hover-underline">Pricing</a></li>
-                            <li><a href="#staff" className="text-sm text-gray-600 hover:text-white transition hover-underline">Hotel Staff</a></li>
-                            <li><a href="#news" className="text-sm text-gray-600 hover:text-white transition hover-underline">Latest News</a></li>
-                            <li><a href="#contact" className="text-sm text-gray-600 hover:text-white transition hover-underline">Contact Us</a></li>
+                            <li><a href="#about" className="text-sm text-gray-600 hover:text-white focus:text-white transition hover-underline">About Hotel</a></li>
+                            <li><a href="#pricing" className="text-sm text-gray-600 hover:text-white focus:text-white transition hover-underline">Pricing</a></li>
+                            <li><a href="#staff" className="text-sm text-gray-600 hover:text-white focus:text-white transition hover-underline">Hotel Staff</a></li>
+                            <li><a href="#news" className="text-sm text-gray-600 hover:text-white focus:text-white transition hover-underline">Latest News</a></li>
+                            <li><a href="#contact" className="text-sm text-gray-600 hover:text-white focus:text-white transition hover-underline">Contact Us</a></li>
                         </ul>
                     </FadeIn>
 
@@ -90,9 +90,9 @@ function Footer() {
                         © Copyright 2025 Fixyland. All Rights Reserved.
                     </p>
                     <div className="flex gap-4 text-sm">
-                        <a href="#terms" className="text-gray-600 hover:text-white transition hover-underline">Terms and Conditions</a>
+                        <a href="#terms" className="text-gray-600 hover:text-white focus:text-white transition hover-underline">Terms and Conditions</a>
                         <span className="text-gray-600">|</span>
-                        <a href="#privacy" className="text-gray-600 hover:text-white transition hover-underline">Privacy Policy</a>
+                        <a href="#privacy" className="text-gray-600 hover:text-white focus:text-white transition hover-underline">Privacy Policy</a>
                     </div>
                 </div>
             </div>

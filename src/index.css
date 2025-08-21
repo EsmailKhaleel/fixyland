@@ -93,6 +93,9 @@
 .hover-underline:hover::before {
   width: 100%;
 }
+.hover-underline:focus::before {
+  width: 100%;
+}
 :root {
   font-family: var(--font-body), Arial;
   font-synthesis: none;
@@ -179,6 +182,9 @@ ul.square-bullets {
 .marquee-text:hover::before {
   width: 100%; /* reveal progressively */
 }
+.marquee-text:focus::before {
+  width: 100%; /* reveal progressively */
+}
 
 /* Custom animation durations */
 .group\/anim::before,
@@ -195,6 +201,12 @@ ul.square-bullets {
   transition-duration: 600ms;
 }
 .group\/anim:hover::after {
+  transition-duration: 300ms;
+}
+.group\/anim:focus::before {
+  transition-duration: 600ms;
+}
+.group\/anim:focus::after {
   transition-duration: 300ms;
 }
 

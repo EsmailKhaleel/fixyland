@@ -6,7 +6,7 @@ function BurgerButton({isDrawerOpen}) {
       onClick={() => {}}
       aria-label="Toggle menu"
       aria-expanded={isDrawerOpen}
-      className="relative w-10 h-10"
+      className="relative w-10 h-10 cursor-pointer"
     >
       {/* Top bar */}
       <span

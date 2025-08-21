@@ -10,14 +10,19 @@ const DrawerMenuItem = ({ item, depth = 0 }) => {
     <>
       <li className={`border-t border-gray-400 py-4 ${depth === 0 ? 'px-4' : depth === 1 ? 'px-6' : 'px-8'}`}>
         <div
-          onClick={() => hasChildren && setIsOpen(!isOpen)}
-          className={`flex items-center justify-between cursor-pointer hover:text-primary transition-colors`}
+          onClick={(e) => hasChildren && setIsOpen(!isOpen)}
+          className={`flex items-center justify-between cursor-pointer focus:text-primary hover:text-primary transition-colors`}
         >
           <span className="font-normal">
             {item.label}
           </span>
           {hasChildren && (
-            <div className='flex items-center gap-3'>
+            <div 
+            onClick={(e) =>{
+              e.stopPropagation();
+              setIsOpen(!isOpen)
+            }}
+            className='flex items-center gap-3'>
                 <div className='w-[1px] h-6 bg-gray-400'></div>
                 <IoIosArrowDown className={`w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
             </div>
