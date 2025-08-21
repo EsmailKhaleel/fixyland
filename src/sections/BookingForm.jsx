@@ -2,10 +2,15 @@ import { FaCalendar } from "react-icons/fa"
 import MainButton from "../components/ui/MainButton"
 
 function BookingForm() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+  };
+
   return (
     <div className="relative flex justify-center sm:justify-end items-center bg-primary/10">
       <div className="relative w-full max-w-[95%] lg:max-w-11/12 mt-[650px] md:mt-[700px] bg-primary/60 backdrop-blur-md py-8 md:py-10 lg:py-14 text-base md:text-lg shadow-xl text-white rounded-lg sm:rounded-tr-none sm:rounded-br-none sm:rounded-bl-2xl sm:rounded-tl-2xl">
-        <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 px-4 md:px-8 lg:px-16">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 md:gap-6 px-4 md:px-8 lg:px-16">
           <div className="flex flex-col gap-2">
             <label htmlFor="CheckIn" className="font-medium">Check In</label>
             <div className="relative">
