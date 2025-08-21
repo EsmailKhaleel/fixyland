@@ -25,7 +25,7 @@ function Drawer({ setIsDrawerOpen }) {
         <div className=" flex flex-col min-h-full">
           <button
             onClick={() => setIsDrawerOpen(false)}
-            className="bg-[#daf5ee] cursor-pointer z-10 p-2 rounded-full absolute top-2 right-4 text-2xl text-gray-800 hover:text-primary focus:text-primary transition-colors skew-1 transform"
+            className="bg-[#daf5ee] cursor-pointer z-10 p-2 rounded-full absolute top-2 right-4 text-2xl text-gray-800 hover:text-primary focus:text-primary active:text-primary transition-colors skew-1 transform"
           >
             <CgClose className="text-primary text-4xl" />
           </button>

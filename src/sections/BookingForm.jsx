@@ -18,7 +18,7 @@ function BookingForm() {
                 name="CheckIn"
                 type="text"
                 placeholder="Select Date" 
-                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary active:outline-none active:ring-2 active:ring-primary transition-all duration-300" 
               />
             </div>
           </div>
@@ -35,7 +35,7 @@ function BookingForm() {
                 name="CheckOut"
                 type="text"
                 placeholder="Select Date" 
-                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+                className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary active:outline-none active:ring-2 active:ring-primary transition-all duration-300" 
               />
             </div>
           </div>
@@ -45,7 +45,7 @@ function BookingForm() {
             <select
               id="Room"
               name="Room"
-              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary active:outline-none active:ring-2 active:ring-primary transition-all duration-300" 
             >
               <option value="single">Single Room</option>
               <option value="double">Double Room</option>
@@ -58,7 +58,7 @@ function BookingForm() {
             <select
               id="Adults"
               name="Adults"
-              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary active:outline-none active:ring-2 active:ring-primary transition-all duration-300" 
             >
               <option value="1">1 Adult</option>
               <option value="2">2 Adults</option>
@@ -72,7 +72,7 @@ function BookingForm() {
             <select
               id="Children"
               name="Children"
-              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300" 
+              className="rounded-sm px-3 py-3 md:px-4 md:py-4 bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-primary active:outline-none active:ring-2 active:ring-primary transition-all duration-300" 
             >
               <option value="0">0 Children</option>
               <option value="1">1 Child</option>

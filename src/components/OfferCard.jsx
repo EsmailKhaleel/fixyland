@@ -9,10 +9,10 @@ function OfferCard({ image, discount, title, direction, delay }) {
             <img
                 src={image}
                 alt="luxury hotel"
-                className="absolute inset-0 w-full h-full object-cover rounded-xl -z-10 group-hover/offer:scale-110 group-hover/offer:-rotate-3 group-focus/offer:scale-110 group-focus/offer:-rotate-3 transition-all duration-600 ease-in-out"
+                className="absolute inset-0 w-full h-full object-cover rounded-xl -z-10 group-hover/offer:scale-110 group-hover/offer:-rotate-3 group-focus/offer:scale-110 group-focus/offer:-rotate-3 group-active/offer:scale-110 group-active/offer:-rotate-3 transition-all duration-600 ease-in-out"
             />
             <div className="absolute inset-0 bg-black/60 rounded-xl -z-10"></div>
-            <div className="border border-white text-white group-hover/offer:bg-white group-hover/offer:text-primary group-focus/offer:bg-white group-focus/offer:text-primary transition-all duration-500 ease-in-out px-3 py-1 rounded-sm text-md font-medium">
+            <div className="border border-white text-white group-hover/offer:bg-white group-hover/offer:text-primary group-focus/offer:bg-white group-focus/offer:text-primary group-active/offer:bg-white group-active/offer:text-primary transition-all duration-500 ease-in-out px-3 py-1 rounded-sm text-md font-medium">
                 {discount}% <span className="text-xl font-bold">OFF</span>
             </div>
             <h2 className="text-4xl font-bold text-white">{title}</h2>

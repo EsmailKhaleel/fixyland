@@ -11,7 +11,7 @@ const DrawerMenuItem = ({ item, depth = 0 }) => {
       <li className={`border-t border-gray-400 py-4 ${depth === 0 ? 'px-4' : depth === 1 ? 'px-6' : 'px-8'}`}>
         <div
           onClick={(e) => hasChildren && setIsOpen(!isOpen)}
-          className={`flex items-center justify-between cursor-pointer focus:text-primary hover:text-primary transition-colors`}
+          className={`flex items-center justify-between cursor-pointer focus:text-primary active:text-primary hover:text-primary transition-colors`}
         >
           <span className="font-normal">
             {item.label}

@@ -6,10 +6,10 @@ import BurgerButton from "../ui/BurgerButton";
 function NavbarActions({ isSticky = false, isDrawerOpen, setIsDrawerOpen }) {
     return (
         <div className="flex gap-4 items-center mr-4">
-            <div className={`items-center justify-center flex p-4 rounded-full ${isSticky ? 'bg-gray/10 focus:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 hover:bg-white/20'} transition-all duration-300`}>
+            <div className={`items-center justify-center flex p-4 rounded-full ${isSticky ? 'bg-gray/10 focus:bg-gray/20 active:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 active:bg-white/20 hover:bg-white/20'} transition-all duration-300`}>
                 <IoSearchOutline className={`${isSticky ? 'text-black' : 'text-white'} cursor-pointer text-3xl`} />
             </div>
-            <div className={`hidden xl:flex group ${isSticky ? 'bg-gray/10 focus:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 hover:bg-white/20'} items-center justify-center flex p-4.5 rounded-full transition-all duration-300 cursor-pointer`}>
+            <div className={`hidden xl:flex group ${isSticky ? 'bg-gray/10 focus:bg-gray/20 active:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 active:bg-white/20 hover:bg-white/20'} items-center justify-center flex p-4.5 rounded-full transition-all duration-300 cursor-pointer`}>
                 <MenuIcon isSticky={isSticky} />
             </div>
             <div className="hidden md:block">

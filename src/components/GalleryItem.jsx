@@ -16,7 +16,7 @@ function GalleryItem({ item, index }) {
         <div
           className="bg-primary/70 absolute inset-0 transition-all duration-300 
             z-[2] origin-top 
-            group-hover:opacity-100 group-hover:scale-y-100 group-focus:opacity-100 group-focus:scale-y-100 
+            group-hover:opacity-100 group-hover:scale-y-100 group-focus:opacity-100 group-focus:scale-y-100 group-active:opacity-100 group-active:scale-y-100 
             opacity-0 scale-y-0"
         >
           <FaEye className="w-10 h-10 text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
