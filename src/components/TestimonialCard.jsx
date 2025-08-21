@@ -3,14 +3,14 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const TestimonialCard = ({ image }) => {
   return (
-    <div className="bg-primary/10 rounded-2xl shadow-sm p-8 flex flex-col gap-6 max-w-xl">
+    <div className="bg-primary/10 rounded-2xl shadow-sm p-8 flex flex-col gap-4 sm:gap-6 max-w-xl">
       <div className="flex gap-1 text-yellow-400">
         {Array.from({ length: 5 }).map((_, i) => (
           <FaStar key={i} className="w-4 h-4" />
         ))}
       </div>
 
-      <p className="text-gray-600 text-lg leading-relaxed">
+      <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
         "Special treat to dine, It was wow experience food was really delicious!
         outstanding dinner made by Master chef, food experience was
         unforgettable!"
@@ -19,7 +19,7 @@ const TestimonialCard = ({ image }) => {
       <hr className="border-gray-300" />
 
       <div className="flex items-center gap-4">
-        <div className="relative w-28 h-28">
+        <div className="relative w-20 h-20 sm:w-28 sm:h-28">
           <img
             src={image}
             alt="customer"

@@ -1,5 +1,20 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 
+const textColors = {
+  black: "text-black",
+  white: "text-white",
+};
+const hoverTextColors = {
+  black: "group-hover:text-black",
+  white: "group-hover:text-white",
+};
+const bgColors = {
+  primary: "bg-primary",
+  secondary: "bg-secondary",
+  white: "bg-white",
+  black: "bg-black",
+};
+
 function MainButton({
   label = "",
   color = "secondary",
@@ -8,20 +23,6 @@ function MainButton({
   textColorHover = "black",
   onClick = () => {},
 }) {
-  const textColors = {
-    black: "text-black",
-    white: "text-white",
-  };
-  const hoverTextColors = {
-    black: "group-hover:text-black",
-    white: "group-hover:text-white",
-  };
-  const bgColors = {
-    primary: "bg-primary",
-    secondary: "bg-secondary",
-    white: "bg-white",
-    black: "bg-black",
-  };
 
   return (
     <button

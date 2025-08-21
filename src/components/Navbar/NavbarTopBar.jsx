@@ -11,10 +11,11 @@ function NavbarTopBar() {
             </ul>
 
             <div className="flex gap-8 text-xl">
-                <FaFacebook className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
-                <FaXTwitter className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
-                <FaInstagram className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
-                <FaBehance className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10" />
+                {[FaFacebook, FaXTwitter, FaInstagram, FaBehance].map((Icon, index) =>
+                (<Icon
+                    key={index}
+                    className="hover:text-secondary transition-colors duration-500 ease-in cursor-pointer z-10"
+                />))}
             </div>
         </div>
     )

@@ -15,18 +15,18 @@ import TestimonialCard from '../components/TestimonialCard'
 
 function TestimonialSection() {
     return (
-        <div className="bg-gray-100 w-full grid grid-cols-1 md:grid-cols-2 items-center justify-start gap-x-44 py-28 px-16">
-            <div className='relative ml-11'>
+        <div className="bg-gray-100 w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-start gap-22 lg:gap-24 xl:gap-36 py-28 px-2 sm:px-12 md:px-16">
+            <div className='relative mr-20 lg:ml-11'>
                 <AnimatedImage
                     src={Img1}
                     alt="Luxury Hotel"
-                    wrapperClass="relative overflow-hidden rounded-xl scale-115"
-                    className="w-full h-auto object-cover"
+                    wrapperClass="relative overflow-hidden rounded-xl scale-100 lg:scale-115"
+                    className="w-full min-h-[300px] md:h-[500px] lg:h-auto object-cover"
                 />
                 <motion.div
-                    animate={{ y: [0, 15, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "backInOut" }}
-                    className='absolute bottom-20 -right-20 border-4 border-white w-[35%] h-[35%] rounded-xl scale-115'>
+                    animate={{ y: [0, 8 , 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "backIn" }}
+                    className='absolute bottom-20 -right-10 lg:-right-20 border-4 border-white w-[30%] h-[30%] lg:w-[35%] lg:h-[35%] rounded-xl scale-100 lg:scale-115'>
                     <motion.div
                         initial={{ translateX: "100%", opacity: 0 }}
                         whileInView={{ translateX: 0, opacity: 1 }}
@@ -43,7 +43,7 @@ function TestimonialSection() {
                 <BatchText text={"Testimonials"} />
                 <AnimatedText
                     text={'Amazing Feedback Say |About Services'}
-                    className='text-4xl font-extrabold'
+                    className='text-2xl sm:text-4xl font-extrabold'
                 />
                 <div className='w-full mt-8'>
                     <Swiper

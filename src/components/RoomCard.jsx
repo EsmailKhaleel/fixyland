@@ -43,7 +43,11 @@ function RoomCard({ room }) {
             </p>
 
             {/* Read More Button */}
-            <button className="self-start relative group flex items-center space-x-2 mb-2 sm:mb-4 text-primary/90 hover:text-primary font-medium transition-all duration-200 cursor-pointer text-sm sm:text-base before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full before:transition-all after:content-[''] after:absolute after:right-0 after:top-full after:w-full hover:after:w-0 after:h-[1px] after:bg-primary after:transition-all group/anim">
+            <button
+                className="self-start relative group flex items-center space-x-2 mb-2 sm:mb-4 text-primary/90 hover:text-primary font-medium transition-all
+             duration-200 cursor-pointer text-sm sm:text-base before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary 
+             hover:before:w-full before:transition-all after:content-[''] after:absolute after:right-0 after:top-full after:w-full hover:after:w-0 after:h-[1px] after:bg-primary after:transition-all group/anim"
+            >
                 <span>Read More</span>
                 <FaArrowRightLong className="w-3.5 h-3.5 sm:w-4 sm:h-4 -rotate-45 transform group-hover:rotate-0 transition-transform duration-200" />
             </button>

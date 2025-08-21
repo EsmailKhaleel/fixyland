@@ -10,18 +10,8 @@ import BatchText from "../components/ui/BatchText";
 import { useEffect, useState } from "react";
 
 function RoomsSection() {
-    const breakPoints = {
-        0: {
-            slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-        },
-    }
     const [width, setWidth] = useState(window.innerWidth);
+
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
@@ -31,13 +21,18 @@ function RoomsSection() {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
     return (
         <>
             <div className="bg-primary/10 w-full flex flex-col gap-4 items-center justify-center">
                 <BatchText text={"Rooms Types"} />
-                <AnimatedText text="The Best Luxury Rooms And |Suites" textColor="black" className="text-4xl text-center font-extrabold" />
+                <AnimatedText 
+                text="The Best Luxury Rooms And |Suites" 
+                textColor="black" 
+                className="text-2xl sm:text-4xl text-center font-extrabold justify-center" 
+                />
             </div>
-            <div className='w-full bg-primary/10 pl-10 pt-10 pb-10'>
+            <div className='w-full bg-primary/10 pl-2 sm:pl-10 pt-10 pb-10'>
                 <div className="select-none cursor-grab">
                     <Swiper
                         modules={[Autoplay]}
@@ -47,7 +42,7 @@ function RoomsSection() {
                                 ? 3.5
                                 : width >= 768
                                 ? 2.5
-                                : 1
+                                : 1.25
                         }
                         navigation
                         pagination={{ clickable: true }}

@@ -1,8 +1,9 @@
 import { IoSearchOutline } from "react-icons/io5";
 import MenuIcon from "../ui/MenuIcon";
 import MainButton from "../ui/MainButton";
+import BurgerButton from "../ui/BurgerButton";
 
-function NavbarActions({ isSticky = false }) {
+function NavbarActions({ isSticky = false, isDrawerOpen, setIsDrawerOpen }) {
     return (
         <div className="flex gap-4 items-center mr-4">
             <div className={`items-center justify-center flex p-4 rounded-full ${isSticky ? 'bg-gray/10 hover:bg-gray/20' : 'bg-white/10 hover:bg-white/20'} transition-all duration-300`}>
@@ -17,6 +18,11 @@ function NavbarActions({ isSticky = false }) {
                     colorHover={isSticky ? "black" : "white"}
                     textColorHover={isSticky ? "white" : "black"}
                 />
+            </div>
+            <div 
+            onClick={() => setIsDrawerOpen(prev => !prev)}
+            className={`xl:hidden items-center justify-center flex p-2 rounded-sm bg-secondary transition-all duration-300`}>
+                <BurgerButton isDrawerOpen={isDrawerOpen}/>
             </div>
         </div>
     )

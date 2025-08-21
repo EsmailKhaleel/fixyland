@@ -6,7 +6,7 @@ import FadeIn from "../components/ui/FadeIn";
 
 function NewsSection() {
     return (
-        <>
+        <div id="news" className="w-full flex flex-col items-center justify-center">
             <div className="bg-primary/10 w-full flex flex-col gap-4 items-center justify-center py-14">
                 <BatchText text={"Hotel News"} />
                 <AnimatedText text="Get More Update For Flxyland" textColor="black" className="text-4xl text-center font-extrabold justify-center" />
@@ -18,7 +18,7 @@ function NewsSection() {
                     </FadeIn>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 

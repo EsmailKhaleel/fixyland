@@ -27,7 +27,7 @@ function VideoSection() {
     }, []);
 
     return (
-        <div ref={sectionRef} className="relative w-full h-[600px] overflow-hidden">
+        <div ref={sectionRef} className="relative w-full h-[400px] sm:h-[600px] overflow-hidden">
             <img
                 src={Background}
                 alt="background"

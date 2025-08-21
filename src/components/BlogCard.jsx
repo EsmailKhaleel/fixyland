@@ -19,7 +19,7 @@ function BlogCard({ blog }) {
             </div>
 
             {/* Content */}
-            <h3 className="self-start relative text-2xl capitalize font-bold text-gray-900 mb-4 before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full before:transition-all before:duration-300 line-clamp-2"
+            <h3 className="self-start relative text-lg sm:text-2xl capitalize font-bold text-gray-900 mb-3 sm:mb-4 before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full before:transition-all before:duration-300 line-clamp-2"
             >{blog.title}</h3>
 
             {/* Amenities */}
@@ -36,7 +36,7 @@ function BlogCard({ blog }) {
             </div>
 
             {/* Description */}
-            <p className="text-gray-600 mb-6 text-md leading-relaxed line-clamp-2">
+            <p className="text-gray-600 mb-6 text-sm sm:text-md leading-relaxed line-clamp-3 sm:line-clamp-2">
                 {blog.description}
             </p>
 

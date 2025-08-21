@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
+import { motion } from "framer-motion"
+
 import Navbar from "../components/Navbar/Navbar.jsx"
 import Home from "../pages/Home.jsx"
-import { motion } from "framer-motion"
-import { div } from "framer-motion/client"
 import Footer from "../components/Footer/Footer.jsx"
 
 function Layout() {
