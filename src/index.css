@@ -1,0 +1,205 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #1f8f6a;
+  --color-secondary: #e5c466;
+  --color-white: #ffffff;
+  --color-black: #181a17;
+  --color-text: #666666;
+  --color-body: #e9f0ec;
+  --color-dark: #1a1a1a;
+  --color-light: #767676;
+  --color-grey: #272727;
+  --color-border: #e5e5e5;
+
+  --color-gradient: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--color-primary) 100%
+  );
+
+  --font-title: "Montserrat", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+
+  --transition-base: all 0.5s ease-in-out;
+
+  --radius-sm: 5px;
+  --radius-lg: 20px;
+
+  --color-blue: #0d6efd;
+  --color-indigo: #6610f2;
+  --color-purple: #6f42c1;
+  --color-pink: #d63384;
+  --color-red: #dc3545;
+  --color-orange: #fd7e14;
+  --color-yellow: #ffc107;
+  --color-green: #198754;
+  --color-teal: #20c997;
+  --color-cyan: #0dcaf0;
+  --color-gray: #6c757d;
+  --color-gray-dark: #343a40;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  --color-primary-bs: #0d6efd;
+  --color-secondary-bs: #6c757d;
+  --color-success-bs: #198754;
+  --color-info-bs: #0dcaf0;
+  --color-warning-bs: #ffc107;
+  --color-danger-bs: #dc3545;
+  --color-light-bs: #f8f9fa;
+  --color-dark-bs: #212529;
+
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: #dee2e6;
+
+  --radius: 0.375rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 2rem;
+  --radius-pill: 50rem;
+
+  --color-link: #0d6efd;
+  --color-link-hover: #0a58ca;
+
+  --color-code: #d63384;
+  --color-highlight: #fff3cd;
+
+  --animate-ripple: ripple 0.6s ease-out forwards;
+}
+.hover-underline {
+  @apply relative;
+}
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: width 1000ms ease;
+}
+.hover-underline:hover::before {
+  width: 100%;
+}
+:root {
+  font-family: var(--font-body), Arial;
+  font-synthesis: none;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*  */
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-medium {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-fast {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 1.5s linear infinite;
+}
+.animate-spin-medium {
+  animation: spin-medium 1s linear infinite;
+}
+.animate-spin-fast {
+  animation: spin-fast 0.8s linear infinite;
+}
+
+ul.square-bullets {
+  list-style-type: square;
+}
+
+.logo-shape {
+  -webkit-clip-path: polygon(0% 0, 100% 0%, 90% 100%, 0% 100%);
+  clip-path: polygon(0% 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.about-img {
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 80%,
+    80% 100%,
+    0% 100%,
+    0% 20%
+  );
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+}
+
+.marquee-text {
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white;
+}
+.marquee-text {
+  position: relative;
+  display: inline-block;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white;
+}
+
+/* The white fill layer */
+.marquee-text::before {
+  content: attr(data-text); /* duplicate the text */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* start hidden */
+  height: 100%;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 1s ease-in-out;
+}
+
+/* Animate the fill left → right on hover */
+.marquee-text:hover::before {
+  width: 100%; /* reveal progressively */
+}
+
+/* Custom animation durations */
+.group\/anim::before,
+.group\/anim::after {
+  transition-property: width;
+}
+.group\/anim::before {
+  transition-duration: 300ms;
+}
+.group\/anim::after {
+  transition-duration: 600ms;
+}
+.group\/anim:hover::before {
+  transition-duration: 600ms;
+}
+.group\/anim:hover::after {
+  transition-duration: 300ms;
+}
+
+@keyframes ripple {
+  0% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 0.1; transform: scaleX(1); }
+  100% { opacity: 0; transform: scaleX(1.5); }
+}
