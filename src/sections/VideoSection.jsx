@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Background from "../assets/video-background-1.jpg";
 import { FaPlay, FaTimes } from "react-icons/fa";
+import Modal from "../components/ui/Modal";
 
 function VideoSection() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,17 @@ function VideoSection() {
     }, []);
 
     return (
-        <div ref={sectionRef} className="relative w-full h-[400px] sm:h-[600px] overflow-hidden">
-            <img
-                src={Background}
-                alt="background"
-                className="w-full h-full object-cover"
-            />
+        <div
+            ref={sectionRef}
+            className="relative w-full h-[400px] sm:h-[600px] overflow-hidden bg-fixed"
+            style={{
+                backgroundImage: `url(${Background})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundAttachment: "fixed"
+            }}
+        >
             <div className="absolute inset-0 bg-black/60"></div>
             {[0, 1, 2].map((i) => (
                 <motion.div
@@ -66,39 +72,31 @@ function VideoSection() {
             </motion.div>
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        id="video-modal"
-                        className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        onClick={handleClose}
-                    >
+                    <Modal isOpen={isOpen} onClose={handleClose}>
                         <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
                             transition={{ duration: 0.5, ease: "easeInOut" }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative w-[90%] max-w-3xl aspect-video bg-black"
+                            className="relative w-[90%] sm:w-[80%] sm:min-w-[600px] aspect-video bg-black p-4 rounded-md  border border-gray-800 shadow-lg"
                         >
                             <button
-                                className="absolute -top-8 right-0 text-white text-2xl z-10"
+                                className="absolute -top-8 right-0 text-white text-3xl cursor-pointer font-light z-10"
                                 onClick={handleClose}
                             >
                                 <FaTimes />
                             </button>
                             <iframe
                                 className="w-full h-full"
-                                src="https://www.youtube.com/embed/qemqQHaeCYo?autoplay=1&mute=0"
+                                src="https://www.youtube.com/embed/qemqQHaeCYo?autoplay=1&mute=1"
                                 title="YouTube video"
                                 allow="autoplay; fullscreen"
                                 allowFullScreen
                                 style={{ border: "none" }}
                             />
                         </motion.div>
-                    </motion.div>
+                    </Modal>
                 )}
             </AnimatePresence>
         </div>

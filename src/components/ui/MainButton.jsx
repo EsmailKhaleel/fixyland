@@ -26,7 +26,7 @@ function MainButton({
 
   return (
     <button
-      className={`relative overflow-hidden min-w-[200px] group text-md font-medium px-6 py-4 rounded-sm transition cursor-pointer flex justify-between items-center gap-3 ${bgColors[color]} ${textColors[textColor]} active:touch-none`}
+      className={`relative overflow-hidden min-w-[200px] group text-md font-medium px-6 py-4 rounded-sm transition cursor-pointer flex justify-between items-center gap-3 ${bgColors[color]} ${textColors[textColor]}`}
       onClick={onClick}
     >
       <span className={`${bgColors[colorHover]} absolute z-0 inset-0 origin-left scale-x-0 transform transition-transform duration-400 group-hover:scale-x-100 group-focus:scale-x-100 group-active:scale-x-100`}/>
