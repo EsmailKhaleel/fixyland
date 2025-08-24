@@ -43,8 +43,8 @@ export default function AboutSection() {
           {/* Star + circular text */}
           <div className="absolute top-[50%] translate-y-[-50%] -right-8 sm:-right-16 w-28 h-28 sm:w-32 sm:h-32 rounded-full flex justify-center items-center shadow-lg">
             <div className="relative w-full h-full flex justify-center items-center bg-white rounded-full p-4">
-              <div className="bg-primary w-1/2 h-1/2 rounded-full flex justify-center items-center relative">
-                <img src={StarIcon} className="fill-[#1f8f6a] w-8 h-8 absolute" />
+              <div className="bg-primary w-1/2 h-1/2 rounded-full flex justify-center items-center relative z-10">
+                <img src={StarIcon} className="w-8 h-8 transform transition-transform duration-500 ease-in-out rotate-0 cursor-pointer hover:rotate-180" />
 
               </div>
               <motion.img

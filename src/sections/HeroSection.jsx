@@ -16,7 +16,7 @@ function HeroSection() {
                     style={{ filter: "brightness(0.5)" }}
                 />
             </div>
-            <div className="relative text-center text-white max-w-4xl mt-20 z-10">
+            <div className="relative text-center text-white max-w-4xl mt-20 z-55">
                 <h1 className="text-4xl sm:text-5xl md:text-[82px] font-bold mb-4 flex flex-col items-center">
                     Book With Best <br />
                     <AnimatedText text={text} textColor='secondary' className="text-secondary" />
