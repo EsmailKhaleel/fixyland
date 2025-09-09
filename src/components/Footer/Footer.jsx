@@ -5,6 +5,7 @@ import { FaFacebook, FaInstagram, FaBehance } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import FadeIn from "../ui/FadeIn";
+import AnimatedText from "../ui/AnimatedText";
 
 function Footer() {
     return (
@@ -36,7 +37,12 @@ function Footer() {
 
                     {/* Explore as */}
                     <FadeIn direction="left" delay={0.4} className="">
-                        <h3 className="text-2xl font-bold mb-6">EXPLORE</h3>
+                        <AnimatedText 
+                            text="EXPLORE" 
+                            textColor="white" 
+                            className="text-2xl font-bold mb-6"
+                            delay={0.4}
+                        />
                         <ul className="space-y-3">
                             <li><a href="#about" className="text-sm text-gray-600 hover:text-white focus:text-white active:text-white transition hover-underline">About Hotel</a></li>
                             <li><a href="#pricing" className="text-sm text-gray-600 hover:text-white focus:text-white active:text-white transition hover-underline">Pricing</a></li>
@@ -48,7 +54,13 @@ function Footer() {
 
                     {/* Contact Info */}
                     <FadeIn direction="left" delay={0.6} className=" text-sm">
-                        <h3 className="text-2xl font-bold mb-6">CONTACT</h3>
+                        {/* <h3 className="text-2xl font-bold mb-6">CONTACT</h3> */}
+                        <AnimatedText 
+                            text="CONTACT" 
+                            textColor="white" 
+                            className="text-2xl font-bold mb-6"
+                            delay={0.6}
+                        />
                         <ul className="space-y-4 text-gray-600">
                             <li>7631 Sabina Park, 115 Devon Isle, Louisiana, USA</li>
                             <li>
@@ -66,7 +78,13 @@ function Footer() {
 
                     {/* Newsletter */}
                     <FadeIn direction="left" delay={0.8} className="bg-white/4 rounded-xl py-12 px-10 ">
-                        <h3 className="text-2xl font-bold mb-6">NEWSLETTER</h3>
+                        {/* <h3 className="text-2xl font-bold mb-6">NEWSLETTER</h3> */}
+                        <AnimatedText 
+                            text="NEWSLETTER" 
+                            textColor="white" 
+                            className="text-2xl font-bold mb-6"
+                            delay={0.8}
+                        />
                         <form className="space-y-6 text-sm sm:text-md">
                             <div className="relative">
                                 <input

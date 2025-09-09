@@ -15,7 +15,7 @@ function BookingForm() {
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 md:gap-6 px-4 md:px-8 lg:px-16">
           <Input
             label="Check In"
-            type="text"
+            type="date"
             placeholder="Select Date"
           >
             <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
@@ -24,7 +24,7 @@ function BookingForm() {
           </Input>
           <Input
             label="Check Out"
-            type="text"
+            type="date"
             placeholder="Select Date"
           >
             <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">

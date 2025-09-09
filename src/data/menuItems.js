@@ -19,19 +19,19 @@ const menuItems = [
   {
     label: 'Pages',
     children: [
-      { label: 'Booking Form' },
-      { label: 'About Hotel' },
-      { label: 'Restaurant' },
-      { label: 'Gallery' },
-      { label: 'Pricing Plan' },
-      { label: '404 Page' },
-      { label: 'Coming Soon' },
-      { label: 'FAQ' },
+      { label: 'Booking Form', link: '/booking' },
+      { label: 'About Hotel', link: '/about-us' },
+      { label: 'Restaurant', link: '/restaurant' },
+      { label: 'Gallery', link: '/our-gallery' },
+      { label: 'Pricing Plan', link: '/our-pricing' },
+      { label: '404 Page', link: '/error' },
+      { label: 'Coming Soon', link: '/coming-soon' },
+      { label: 'FAQ', link: '/faq\'s' },
       {
         label: 'Hotel Staff',
         children: [
-          { label: 'Staff List' },
-          { label: 'Staff Details' }
+          { label: 'Staff List', link: '/our-staff' },
+          { label: 'Staff Details', link: '/staff-details' }
         ]
       },
       {

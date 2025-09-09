@@ -12,7 +12,6 @@ import StaffSection from "../sections/StaffSection"
 import MarqueeImagesSection from "../sections/MarqueeImagesSection"
 import NewsSection from "../sections/NewsSection"
 import GallerySection from "../sections/GallerySection"
-import CountUpSection from "../sections/CountUpSection"
 function Home() {
   return (
     <main className="overflow-hidden">
@@ -23,7 +22,6 @@ function Home() {
         <RoomsSection />
         <Services />
         <VideoSection />
-        <CountUpSection />
         <RestaurantSection />
         <OffersSection />
         <TestimonialSection />

@@ -3,6 +3,10 @@
   import Room3 from '../assets/room-3.jpg';
   import Room4 from '../assets/room-4.jpg';
   import Room5 from '../assets/room-5.jpg';
+  import Room6 from '../assets/room-6.jpg';
+  import Room7 from '../assets/room-7.jpg';
+  import Room8 from '../assets/room-8.jpg';
+  import Room9 from '../assets/room-9.jpg';
 
   const rooms = [
     {
@@ -50,6 +54,46 @@
       title: 'Suite Rooms',
       price: '$950',
       image: Room5,
+      guests: '2 Guests',
+      beds: '2 Beds',
+      bath: '1 Bath',
+      description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+    },
+    {
+      id: 6,
+      title: 'Double Rooms',
+      price: '$1050',
+      image: Room6,
+      guests: '2 Guests',
+      beds: '2 Beds',
+      bath: '1 Bath',
+      description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+    },
+    {
+      id: 7,
+      title: 'Premium Rooms',
+      price: '$1250',
+      image: Room7,
+      guests: '2 Guests',
+      beds: '2 Beds',
+      bath: '1 Bath',
+      description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+    },
+    {
+      id: 8,
+      title: 'Luxury Rooms',
+      price: '$1500',
+      image: Room8,
+      guests: '2 Guests',
+      beds: '2 Beds',
+      bath: '1 Bath',
+      description: 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered.'
+    },
+    {
+      id: 9,
+      title: 'Presidential Rooms',
+      price: '$2000',
+      image: Room9,
       guests: '2 Guests',
       beds: '2 Beds',
       bath: '1 Bath',

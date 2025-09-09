@@ -1,10 +1,11 @@
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const MenuItem = ({ item }) => {
   return (
     <div className="group/item relative"> {/* unique group for this item */}
       {/* Row hover group only for styling */}
-      <div className="group/row cursor-pointer transition-all duration-300 px-6 py-4 border-b border-b-gray-400/10 flex items-center justify-between gap-2 hover:bg-secondary focus:bg-secondary">
+      <Link to={item.link} className="group/row cursor-pointer transition-all duration-300 px-6 py-4 border-b border-b-gray-400/10 flex items-center justify-between gap-2 hover:bg-secondary focus:bg-secondary">
         <div className="flex items-center gap-2 transition-colors duration-300 relative group-hover/row:text-black group-focus/row:text-black group-active/row:text-black">
           <span className="opacity-0 absolute left-0 transition-opacity duration-300 group-hover/row:opacity-100 group-focus/row:opacity-100 group-active/row:opacity-100 text-xs">//</span>
           <span className="inline-block transition-all duration-500 group-hover/row:translate-x-6 group-focus/row:translate-x-6 group-active/row:translate-x-6">
@@ -16,7 +17,7 @@ const MenuItem = ({ item }) => {
             <IoIosArrowForward className="transition-transform duration-300 group-hover/row:rotate-90 group-hover/row:text-black group-focus/row:text-black group-focus/row:rotate-90 group-active/row:text-black group-active/row:rotate-90" />
           </span>
         )}
-      </div>
+      </Link>
 
       {/* Submenu — visibility tied to this item's group only */}
       {item.children && (

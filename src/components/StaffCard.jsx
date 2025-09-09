@@ -3,11 +3,21 @@ import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 function StaffCard({ employee }) {
+    const handleMouseLeave = (e) => {
+        const element = e.currentTarget;
+        element.classList.add('not-hover');
+        setTimeout(() => {
+            element.classList.remove('not-hover');
+        }, 600);
+    };
     return (
-        <div className="mt-8 relative flex flex-col items-start gap-4 bg-white rounded-xl z-0 max-w-[300px]">
-            <div className="relative overflow-hidden group rounded-t-xl">
+        <div className="mt-8 relative flex flex-col items-start gap-4 bg-white rounded-xl z-0 max-w-[400px]">
+            <div
+                onMouseLeave={handleMouseLeave}
+                className="relative overflow-hidden group rounded-t-xl"
+            >
                 <img src={employee.image} alt="Staff" className="w-full h-full object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-all duration-500 ease-in-out" />
-                <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-focus:animate-ripple group-active:animate-ripple origin-center transition-all duration-500 ease-out"></span>
+                <span className={`absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-focus:animate-ripple group-active:animate-ripple group-[.not-hover]:animate-rippleReverse origin-center transition-all ease-out`}></span>
             </div>
             <h2 className="relative text-xl sm:text-2xl ml-4 mt-4 font-bold text-black before:content-[''] before:w-0 before:h-[1px] before:bg-black before:absolute before:bottom-0 before:left-0 before:transition-all before:duration-500 hover:before:w-full focus:before:w-full active:before:w-full">
                 {employee.name}</h2>

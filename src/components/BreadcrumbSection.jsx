@@ -1,0 +1,23 @@
+import Breadcrumb from "./ui/Breadcrumb";
+import Background from "../assets/breadcrumb-banner.jpg";
+
+function BreadcrumbSection({ image = Background, title}) {
+    return (
+        <div
+            className="relative h-[350px] bg-cover bg-center bg-no-repeat mt-24 flex items-center px-2 sm:px-12 lg:px-16 gap-4"
+            style={{ backgroundImage: `url(${image})` }}
+        >
+            <div className="absolute inset-0 bg-black opacity-75"></div>
+            <div className="relative z-10">
+                <h1 className="text-3xl md:text-5xl leading-snug tracking-wide font-extrabold text-white">{title}</h1>
+                <div
+                    className="mt-2 text-gray-300"
+                >
+                    <Breadcrumb />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default BreadcrumbSection

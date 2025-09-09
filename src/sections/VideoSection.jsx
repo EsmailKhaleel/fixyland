@@ -4,7 +4,7 @@ import Background from "../assets/video-background-1.jpg";
 import { FaPlay, FaTimes } from "react-icons/fa";
 import Modal from "../components/ui/Modal";
 
-function VideoSection() {
+function VideoSection({ hasOverlay = true }) {
     const [isOpen, setIsOpen] = useState(false);
     const sectionRef = useRef(null);
     const timeoutRef = useRef(null);
@@ -39,15 +39,15 @@ function VideoSection() {
                 backgroundAttachment: "fixed"
             }}
         >
-            <div className="absolute inset-0 bg-black/60"></div>
+            {hasOverlay && <div className="absolute inset-0 bg-black/60"></div>}
             {[0, 1, 2].map((i) => (
                 <motion.div
                     key={i}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border bg-gray-200 opacity-70"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white opacity-70"
                     initial={{ scale: 0.8, opacity: 0.8 }}
-                    animate={{ scale: 2.5, opacity: 0 }}
+                    animate={{ scale: 1.5, opacity: 0 }}
                     transition={{
-                        duration: 2,
+                        duration: 1.5,
                         repeat: Infinity,
                         repeatType: "loop",
                         repeatDelay: 3,

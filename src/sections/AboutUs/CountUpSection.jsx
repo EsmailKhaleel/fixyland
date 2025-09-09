@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
+import Background from "../../assets/pattern-1.png";
 
 const stats = [
   { end: 305, label: "Luxury Rooms" },
@@ -33,18 +34,22 @@ function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-primary py-16 px-4"
+      className="bg-primary py-28 px-4"
+      style={{ backgroundImage: `url(${Background})`}}
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
+      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
         {stats.map((stat, index) => (
-          <div key={index} className="py-8 flex flex-col items-center">
-            <h3 className="marquee-text text-primary text-5xl font-extrabold flex items-center">
+          <div 
+          key={index} 
+          className={`flex flex-col items-center ${index < stats.length - 1 ? 'border-dashed border-b gap-4 py-4 sm:border-b-0 sm:border-r border-white' : 'pb-0 pt-4'}`}
+          >
+            <h3 className="marquee-text text-primary text-6xl font-extrabold flex items-center">
               {start && (
                 <CountUp end={stat.end} duration={3} />
               )}
               <span className="ml-1">+</span>
             </h3>
-            <p className="mt-2 text-2xl font-extrabold text-white">
+            <p className="mt-2 text-2xl font-normal text-white">
               {stat.label}
             </p>
           </div>
