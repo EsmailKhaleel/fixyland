@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 function AnimatedImage({ src, alt, wrapperClass, className, bgColor = "bg-gray-100" }) {
     return (
-        <div className={`${wrapperClass}`}>
+        <div className={`relative ${wrapperClass}`}>
             <img src={src} alt={alt} className={`${className}`} />
             <motion.span
                 className={`absolute inset-0 ${bgColor}`}

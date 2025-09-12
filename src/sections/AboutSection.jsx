@@ -10,10 +10,11 @@ import AnimatedImage from "../components/ui/AnimatedImage";
 import BatchText from "../components/ui/BatchText";
 import aboutInfo from "../data/aboutInfo";
 import AnimatedCirclesShape from "../components/ui/AnimatedCirclesShape";
+import CheckItem from "../components/ui/CheckItem";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] mx-auto gap-8 lg:gap-24 items-center px-2 sm:px-12 md:px-28 py-26 overflow-hidden bg-primary/10 " >
+    <section id="about" className="section-padding relative grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] mx-auto gap-8 lg:gap-24 items-center overflow-hidden bg-primary/10 " >
       {/* Left image part */}
       <div className="relative w-full flex justify-center items-center">
         <AnimatedCirclesShape />
@@ -41,15 +42,15 @@ export default function AboutSection() {
       </div>
 
       {/* Right text content */}
-      <div className="flex flex-col items-start gap-4">
+      <div className="flex flex-col items-start gap-6">
         <BatchText text="About Fixyland" />
-        <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900">
+        <h2 className="heading-text font-extrabold text-gray-900">
           <AnimatedText
-            text="World Class Luxury Hotel and |Resort Near City"
+            text="World Class Luxury Hotel and Resort Near City"
             textColor="text-gray-900"
           />
         </h2>
-        <FadeIn className="text-gray-600 text-sm" delay={0.2}>
+        <FadeIn className="text-gray-600 text-base" delay={0.2}>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don't look even.
@@ -57,9 +58,7 @@ export default function AboutSection() {
 
         <FadeIn delay={0.4} className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm gap-x-14">
           {aboutInfo.map((info, index) => (
-            <div key={index} className="flex items-center gap-2 text-gray-600">
-              <FaRegCircleCheck className="text-primary bg-primary/10 rounded-full" /> 24-Hours Emergency Service
-            </div>
+            <CheckItem key={index} icon={FaRegCircleCheck} text={info} />
           ))}
         </FadeIn>
 

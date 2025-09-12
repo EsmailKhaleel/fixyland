@@ -29,14 +29,15 @@ function RoomsSection() {
                 <AnimatedText 
                 text="The Best Luxury Rooms And |Suites" 
                 textColor="black" 
-                className="text-2xl sm:text-4xl text-center font-extrabold justify-center" 
+                className="heading-text text-center font-extrabold justify-center" 
                 />
             </div>
             <div className='w-full bg-primary/10 pl-2 sm:pl-10 pt-10 pb-10'>
                 <div className="select-none cursor-grab">
                     <Swiper
                         modules={[Autoplay]}
-                        spaceBetween={30}
+                        spaceBetween={15}
+                        loop={true}
                         slidesPerView={
                             width >= 1024
                                 ? 3.5
@@ -44,13 +45,11 @@ function RoomsSection() {
                                 ? 2.5
                                 : 1.25
                         }
-                        navigation
-                        pagination={{ clickable: true }}
                         scrollbar={{ draggable: true }}
                         autoplay={{
                             delay: 3000,
                             disableOnInteraction: false,
-                            pauseOnMouseEnter: true,
+                            pauseOnMouseEnter: false,
                         }}
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log('slide change')}

@@ -20,7 +20,7 @@ function ServiceCard({ service, active, onActivate }) {
           ${active ? "text-white" : "text-gray-800"}`}
       />
       <h3
-        className={`text-2xl font-bold z-10 transition-colors duration-300
+        className={`text-2xl font-bold z-10 transition-colors duration-300 hover-underline w-fit
           ${active ? "text-white" : "text-gray-900"}`}
       >
         {service.label}

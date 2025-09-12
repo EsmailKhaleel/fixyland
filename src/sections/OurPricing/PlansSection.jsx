@@ -9,13 +9,13 @@ import FadeIn from "../../components/ui/FadeIn";
 function PlansSection() {
     const [plan, setPlan] = useState("Monthly");
     return (
-        <section className="relative bg-primary-light w-full py-22 px-2 sm:px-12 md:px-16 flex flex-col justify-center gap-8 items-center">
-            <div className="flex flex-col items-center justify-center gap-4 sm:gap-8 pt-8 sm:pt-12">
+        <section className="relative bg-primary-light w-full section-padding flex flex-col justify-center gap-8 items-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:gap-8">
                 <BatchText text="Our Pricing" />
                 <AnimatedText
                     text="We've Offered The Best Pricing For You"
                     textColor="text-gray-900 "
-                    className="text-2xl sm:text-[40px] font-extrabold justify-center max-w-2xl"
+                    className="heading-text font-extrabold justify-center max-w-2xl"
                 />
                 <FadeIn direction="up" delay={0.2}>
                     <div className="flex items-center justify-center my-4">

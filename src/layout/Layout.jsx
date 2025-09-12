@@ -14,7 +14,20 @@ import OurPricing from "../pages/OurPricing.jsx";
 import Faqs from "../pages/Faqs.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import HotelStaff from "../pages/HotelStaff.jsx";
-
+import StaffDetails from "../pages/StaffDetails.jsx";
+import TermsAndConditions from "../pages/TermsAndConditions.jsx";
+import PrivacyPolicy from "../pages/PrivacyPolicy.jsx";
+import RoomsGrid from "../pages/RoomsGrid.jsx";
+import RoomsList from "../pages/RoomsList.jsx";
+import RoomsDetails from "../pages/RoomsDetails.jsx";
+import ServicesStyle1 from "../pages/ServicesStyle1.jsx";
+import ServicesStyle2 from "../pages/ServicesStyle2.jsx";
+import ServiceDetails from "../pages/ServiceDetails.jsx";
+import BlogGrid from "../pages/BlogGrid.jsx";
+import BlogList from "../pages/BlogList.jsx";
+import BlogSideBar from "../pages/BlogSideBar.jsx";
+import BlogDetails from "../pages/BlogDetails.jsx";
+import ContactUs from "../pages/ContactUs.jsx";
 
 function Layout() {
   const location = useLocation();
@@ -47,6 +60,20 @@ function Layout() {
             <Route path="/faq's" element={<Faqs />} />
             <Route path="/error" element={<NotFound />} />
             <Route path="/our-staff" element={<HotelStaff />} />
+            <Route path="/our-staff/staff-details" element={<StaffDetails />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/rooms-grid" element={<RoomsGrid />} />
+            <Route path="/rooms-list" element={<RoomsList />} />
+            <Route path="/rooms/rooms-details" element={<RoomsDetails />} />
+            <Route path="/services-style-1" element={<ServicesStyle1 />} />
+            <Route path="/services-style-2" element={<ServicesStyle2 />} />
+            <Route path="/services/service-details" element={<ServiceDetails />} />
+            <Route path="/blog-grid" element={<BlogGrid />} />
+            <Route path="/blog-list" element={<BlogList />} />
+            <Route path="/blog-sidebar" element={<BlogSideBar />} />
+            <Route path="/blog/blog-details" element={<BlogDetails />} />
+            <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
           <Footer />
         </motion.div>

@@ -5,9 +5,6 @@ function Breadcrumb() {
     const location = useLocation();
     const pathnames = location.pathname.split('/').filter((x) => x);
     //   filter(x => x) is a shorthand for filter(x => x !== "")
-    console.log("pathnames", pathnames);
-    console.log("location", location);
-
 
     return (
         <nav aria-label="breadcrumb" className="py-4">

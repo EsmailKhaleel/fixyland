@@ -8,13 +8,13 @@ function Staff() {
     return (
         <section
             id="staff"
-            className="relative h-auto bg-gray-100 w-full py-24 px-2 sm:px-12 md:px-16 flex flex-col items-center gap-4"
+            className="relative h-auto bg-gray-100 w-full py-24 section-padding flex flex-col items-center gap-4"
         >
             <BatchText text={"Fixyland Staff"} />
             <AnimatedText 
             text="Expert Staff Are Always At Your Service" 
             textColor="black" 
-            className="text-2xl sm:text-[40px] text-center font-extrabold justify-center" 
+            className="heading-text text-center font-extrabold justify-center" 
             />
             <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 sm:mx-10">
                 {/* Sttaff Card */}

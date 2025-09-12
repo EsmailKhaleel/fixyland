@@ -24,7 +24,7 @@ const MenuItem = ({ item }) => {
         <div
           className="
             absolute top-0 left-full
-            bg-primary text-white min-w-[200px]
+            bg-primary text-white min-w-[250px]
             opacity-0 invisible
             group-hover/item:opacity-100 group-hover/item:visible
             transform scale-95 group-hover/item:scale-100

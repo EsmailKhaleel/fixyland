@@ -9,14 +9,14 @@ function RestaurantSection({ badgeText = "Fresh & Healthy", title = "Delicious M
   const rightCol = data.slice(Math.ceil(data.length / 2));
 
   return (
-    <section className={`relative w-full overflow-hidden py-28 px-2 sm:px-12 md:px-16 ${bgColor}`}>
+    <section className={`relative w-full overflow-hidden section-padding ${bgColor}`}>
       {/* Section Heading */}
       <div className="w-full flex flex-col gap-4 items-center justify-center">
         <BatchText text={badgeText} />
         <AnimatedText
           text={title}
           textColor="black"
-          className="text-2xl sm:text-[40px] text-center font-extrabold justify-center"
+          className="heading-text text-center font-extrabold justify-center"
         />
       </div>
 

@@ -2,19 +2,20 @@
 const menuItems = [
   {
     label: 'Home',
-    children: [
-      { label: 'Home Page 1' },
-      { label: 'Home Page 2' },
-      { label: 'Home Page 3' },
-      {
-        label: 'Header Styles',
-        children: [
-          { label: 'Header Style 1' },
-          { label: 'Header Style 2' },
-          { label: 'Header Style 3' }
-        ]
-      }
-    ]
+    link: '/',
+    // children: [
+    //   { label: 'Home Page', link: '/' },
+      // { label: 'Home Page 2' },
+      // { label: 'Home Page 3' },
+      // {
+      //   label: 'Header Styles',
+      //   children: [
+      //     { label: 'Header Style 1' },
+      //     { label: 'Header Style 2' },
+      //     { label: 'Header Style 3' }
+      //   ]
+      // }
+    // ]
   },
   {
     label: 'Pages',
@@ -31,14 +32,14 @@ const menuItems = [
         label: 'Hotel Staff',
         children: [
           { label: 'Staff List', link: '/our-staff' },
-          { label: 'Staff Details', link: '/staff-details' }
+          { label: 'Staff Details', link: '/our-staff/staff-details' }
         ]
       },
       {
-        label: 'Privacy Policy',
+        label: 'Policies',
         children: [
-          { label: 'Privacy Policy 1' },
-          { label: 'Privacy Policy 2' }
+          { label: 'Terms & Conditions', link: '/terms-and-conditions' },
+          { label: 'Privacy Policy', link: '/privacy-policy' }
         ]
       }
     ]
@@ -46,30 +47,30 @@ const menuItems = [
   {
     label: 'Rooms & Suites',
     children: [
-      { label: 'Room List' },
-      { label: 'Room Details' },
-      { label: 'Room Booking' }
+      { label: 'Rooms Grid', link: '/rooms-grid' },
+      { label: 'Rooms List', link: '/rooms-list' },
+      { label: 'Room Details', link: '/rooms/rooms-details' }
     ]
   },
   {
     label: 'Services',
     children: [
-      { label: 'Services Page 1' },
-      { label: 'Services Page 2' },
-      { label: 'Service Details' }
+      { label: 'Services Page 1', link: '/services-style-1' },
+      { label: 'Services Page 2', link: '/services-style-2' },
+      { label: 'Service Details', link: '/services/service-details' }
     ]
   },
   {
     label: 'Blog',
     children: [
-      { label: 'Blog List' },
-      { label: 'Blog Details' },
-      { label: 'Blog Grid' },
-      { label: 'Blog Masonry' }
+      { label: 'Blog Grid', link: '/blog-grid' },
+      { label: 'Blog List', link: '/blog-list' },
+      { label: 'Blog Sidebar', link: '/blog-sidebar' },
+      { label: 'Blog Details', link: '/blog/blog-details' },
     ]
   },
   {
-    label: 'Contact'
+    label: 'Contact', link: '/contact-us'
   }
 ];
 

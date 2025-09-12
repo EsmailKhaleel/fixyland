@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import FadeIn from "../ui/FadeIn";
 import AnimatedText from "../ui/AnimatedText";
+import SocialMediaButtons from "../SocialMediaButtons";
 
 function Footer() {
     return (
@@ -20,19 +21,7 @@ function Footer() {
                         <p className="text-gray-600 text-sm">
                             Nam libero tempore cum soluta nobis eseligendi optio cumque nihile impedit quo minus maxime placeat facere
                         </p>
-                        <div className="flex items-center gap-4">
-                            {[FaFacebook, FaXTwitter, FaInstagram, FaBehance].map((Icon, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white/5 active:bg-primary focus:bg-primary hover:bg-primary rounded-sm p-3 cursor-pointer transition-colors duration-300 ease-in-out"
-                                >
-
-                                    <Icon
-                                        className="w-5 h-5 cursor-pointer text-white ounded-sm transition-colors duration-300 ease-in-out"
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        <SocialMediaButtons />
                     </FadeIn>
 
                     {/* Explore as */}

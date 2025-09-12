@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
-import Background from "../../assets/pattern-1.png";
+import PrimarySection from "../../components/PrimarySection";
 
 const stats = [
   { end: 305, label: "Luxury Rooms" },
@@ -32,10 +32,10 @@ function StatsSection() {
   }, []);
 
   return (
+    <PrimarySection>
     <section
       ref={sectionRef}
-      className="bg-primary py-28 px-4"
-      style={{ backgroundImage: `url(${Background})`}}
+      className="w-full"
     >
       <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
         {stats.map((stat, index) => (
@@ -56,6 +56,7 @@ function StatsSection() {
         ))}
       </div>
     </section>
+    </PrimarySection>
   );
 }
 

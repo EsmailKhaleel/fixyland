@@ -13,10 +13,10 @@ import About2 from "../../assets/about-2-2.jpg"
 import Spoon from "../../assets/spoon.svg"
 function Activities() {
     return (
-        <section className="relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-20 py-28 px-2 sm:px-12 md:px-16 bg-primary-light">
+        <section className="relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-20 section-padding bg-primary-light">
             <div className="flex flex-col items-start gap-4 sm:gap-8 pt-8 sm:pt-12">
                 <BatchText text="Luxury Hotel" />
-                <h2 className="text-2xl sm:text-[40px] font-extrabold text-gray-900">
+                <h2 className="heading-text font-extrabold text-gray-900">
                     <AnimatedText
                         text="We Provide Outdoor Activities To All Visitors"
                         textColor="text-gray-900 "

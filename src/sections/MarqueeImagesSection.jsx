@@ -3,7 +3,7 @@ import marqueeImages from '../data/marqueeImages';
 
 function MarqueeImagesSection() {
     return (
-        <div className="w-full bg-gray-100 flex items-center justify-center pt-10 lg:pt-48 pb-10">
+        <div className="w-full bg-gray-100 flex items-center justify-center py-16 lg:pt-52">
             <Marquee
                 gradient={false}
                 speed={60}

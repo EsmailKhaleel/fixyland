@@ -1,18 +1,18 @@
 import AnimatedText from "../../components/ui/AnimatedText"
 import BatchText from "../../components/ui/BatchText"
-import Background from "../../assets/pattern-1.png"
 import FadeIn from "../../components/ui/FadeIn"
 import BookingForm from "../../components/BookingForm"
+import PrimarySection from "../../components/PrimarySection"
 
 function BookingTableSection() {
   return (
+    <PrimarySection>
     <div
       id="booking-table"
-      style={{ backgroundImage: `url(${Background})` }}
-      className="relative h-auto bg-primary w-full py-24 px-2 sm:px-12 md:px-16 flex flex-col items-center gap-8"
+      className="relative h-auto w-full flex flex-col items-center gap-8"
     >
       <BatchText text="Booking" />
-      <AnimatedText text="Book Your Private Table" textColor="white" className="text-2xl sm:text-4xl text-center font-extrabold justify-center" />
+      <AnimatedText text="Book Your Private Table" textColor="white" className="heading-text text-center font-extrabold justify-center" />
       <FadeIn delay={0.3} direction="up" className="max-w-2xl">
         <p className="text-white text-md sm:text-lg leading-relaxed text-center">
           Booking request <i className="text-secondary">(+1) 987 654 3210</i> or fill out the booking form.
@@ -22,6 +22,7 @@ function BookingTableSection() {
         <BookingForm btnLabel="Book A Table" />
       </div>
     </div>
+    </PrimarySection>
   )
 }
 

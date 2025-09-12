@@ -5,7 +5,7 @@ import OfferCard from "../components/OfferCard"
 
 function OffersSection() {
     return (
-        <div className="bg-primary/10 w-full flex flex-col items-center justify-center gap-10 py-28 px-2 md:px-12 sm:px-16">
+        <div className="section-padding bg-primary/10 w-full flex flex-col items-center justify-center gap-10">
             <BatchText text={"Special Offers"} />
             <AnimatedText
                 text="Special Discount for Hotel & |Resort Booking"

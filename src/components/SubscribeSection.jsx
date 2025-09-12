@@ -1,16 +1,14 @@
-import BackgroundShape from '../../assets/shape-1.svg'
-import FadeIn from '../../components/ui/FadeIn'
-import MainButton from '../../components/ui/MainButton'
+import BackgroundShape from '../assets/shape-1.svg'
+import FadeIn from './ui/FadeIn'
+import MainButton from './ui/MainButton'
 function SubscribeSection() {
     return (
-        <section className="relative bg-primary w-full py-22 px-2 sm:px-12 md:px-16 flex flex-col justify-center lg:flex-row lg:justify-between gap-8 items-center">
-            <FadeIn delay={0.2} direction='left' >
-                <div className="max-w-2xl">
-                    <h2 className="text-[40px] font-extrabold text-white text-center lg:text-left">We Offer Every Month 20% Off for Our All Subscribers</h2>
-                </div>
+        <section className="relative bg-primary w-full section-padding flex flex-col justify-center lg:flex-row lg:justify-between gap-8 items-center">
+            <FadeIn delay={0.2} direction='left' className="flex-4">
+                <h2 className="text-[40px] font-extrabold text-white text-center lg:text-left">We Offer Every Month 20% Off for Our All Subscribers</h2>
             </FadeIn>
-            <FadeIn delay={0.4} direction='right'>
-                <div className="w-full max-w-xl min-w-[500px] ">
+            <FadeIn delay={0.4} direction='right' className={"w-full flex-3 flex justify-center lg:justify-end"}>
+                <div className="w-full max-w-2xl">
                     <div className="flex relative">
                         <input type="email" placeholder="Enter your email"
 

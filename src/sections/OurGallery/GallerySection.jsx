@@ -17,7 +17,7 @@ function GallerySection() {
     const categories = [...new Set(gallery.map(item => item.category))];
 
     return (
-        <section className="relative bg-primary-light w-full py-24 px-2 sm:px-12 md:px-16 flex flex-col justify-center items-center gap-8">
+        <section className="relative bg-primary-light w-full section-padding flex flex-col justify-center items-center gap-8">
             {/* Filter Buttons */}
             <div className="flex gap-6 flex-wrap justify-center">
                 {["Show All", ...categories].map((category) => (

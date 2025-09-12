@@ -1,6 +1,6 @@
 import PlansSection from "../sections/OurPricing/PlansSection"
 import BreadcrumbSection from "../components/BreadcrumbSection"
-import SubscribeSection from "../sections/OurGallery/SubscribeSection"
+import SubscribeSection from "../components/SubscribeSection"
 
 function OurPricing() {
     return (

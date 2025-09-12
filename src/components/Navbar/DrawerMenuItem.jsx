@@ -1,16 +1,26 @@
 import { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const DrawerMenuItem = ({ item, depth = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const hasChildren = item.children && item.children.length > 0;
-
   return (
     <>
       <li className={`border-t border-gray-400 py-4 ${depth === 0 ? 'px-4' : depth === 1 ? 'px-6' : 'px-8'}`}>
         <div
-          onClick={(e) => hasChildren && setIsOpen(!isOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (hasChildren) {
+              setIsOpen(!isOpen);
+            }
+            if ("link" in item) {
+              navigate(item.link);
+              setIsOpen(false);
+            }
+          }}
           className={`flex items-center justify-between cursor-pointer focus:text-primary active:text-primary hover:text-primary transition-colors`}
         >
           <span className="font-normal">
@@ -21,6 +31,7 @@ const DrawerMenuItem = ({ item, depth = 0 }) => {
             onClick={(e) =>{
               e.stopPropagation();
               setIsOpen(!isOpen)
+              navigate(item.link);
             }}
             className='flex items-center gap-3'>
                 <div className='w-[1px] h-6 bg-gray-400'></div>

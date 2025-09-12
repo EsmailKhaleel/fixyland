@@ -8,12 +8,12 @@ import marqueeImages from '../../data/marqueeImages';
 
 function Clents() {
   return (
-    <section className="w-full py-28 px-2 sm:px-12 md:px-16 bg-primary-light flex flex-col items-center gap-8">
+    <section className="w-full section-padding bg-primary-light flex flex-col items-center gap-8">
         <BatchText text="Our Clents" />
         <AnimatedText
             text="We Have More Then 150+ Global Clents"
             textColor="text-gray-900"
-            className="text-2xl sm:text-[40px] text-center font-extrabold justify-center break-words max-w-xl"
+            className="heading-text text-center font-extrabold justify-center break-words max-w-xl"
         />
         <div className="w-full rounded-lg overflow-hidden">
             <Swiper

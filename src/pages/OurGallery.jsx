@@ -1,6 +1,6 @@
 import BreadcrumbSection from "../components/BreadcrumbSection"
+import SubscribeSection from "../components/SubscribeSection"
 import GallerySection from "../sections/OurGallery/GallerySection"
-import SubscribeSection from "../sections/OurGallery/SubscribeSection"
 
 function OurGallery() {
   return (

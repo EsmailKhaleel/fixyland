@@ -1,13 +1,17 @@
 import DropdownMenu from "../ui/DropdownMenu";
 import { IoIosArrowDown } from "react-icons/io";
 import menuItems from "../../data/menuItems";
+import { useNavigate } from "react-router-dom";
 
 function NavBarMenu({ isSticky = false }) {
+    const navigate = useNavigate();
     return (
-        <nav className={`hidden xl:flex gap-6 ${isSticky ? 'text-black h-[60px]' : 'text-white h-[100px]' } font-semibold`}>
+        <nav className={`hidden xl:flex gap-6 ${isSticky ? 'text-black h-[60px]' : 'text-white h-[100px]'} font-semibold`}>
             <ul className="h-full flex gap-6">
                 {menuItems.map((item) => (
-                    <li key={item.label} className={`group relative flex items-center gap-1 cursor-pointer hover:text-primary focus:text-primary active:text-primary transition-colors duration-1000 ${!item.children ? '' : ''}`}>
+                    <li
+                        onClick={() => { item.link && navigate(item.link) }}
+                        key={item.label} className={`group relative flex items-center gap-1 cursor-pointer hover:text-primary focus:text-primary active:text-primary transition-colors duration-1000 ${!item.children ? '' : ''}`}>
                         {item.label} {item.children && <IoIosArrowDown className="group-hover:rotate-180 group-focus:rotate-180 group-active:rotate-180 transition-transform duration-300" />}
                         {item.children && <DropdownMenu items={item.children} />}
                     </li>

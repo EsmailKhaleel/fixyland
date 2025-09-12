@@ -41,7 +41,7 @@ function BlogCard({ blog }) {
             </p>
 
             {/* Read More Button */}
-            <div className="mt-auto self-start relative group flex items-center space-x-2 mb-4 text-primary/90 hover:text-primary focus:text-primary active:text-primary font-medium transition-all duration-200 cursor-pointer before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full focus:before:w-full active:before:w-full before:transition-all after:content-[''] after:absolute after:right-0 after:top-full after:w-full hover:after:w-0 :after:w-0 after:h-[1px] after:bg-primary after:transition-all group/anim">
+            <div className="mt-auto self-start relative ">
                 <MainButton
               label="Read More"
               color="primary"

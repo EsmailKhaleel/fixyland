@@ -1,6 +1,6 @@
 import BreadcrumbSection from "../components/BreadcrumbSection"
+import SubscribeSection from "../components/SubscribeSection"
 import StaffGridSection from "../sections/HotelStaff/StaffGridSection"
-import SubscribeSection from "../sections/OurGallery/SubscribeSection"
 
 function HotelStaff() {
   return (

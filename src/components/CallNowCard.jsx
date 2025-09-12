@@ -11,12 +11,12 @@ function CallNowCard() {
                 alt="Shape background"
                 className="absolute bottom-0 w-full z-0"
             />
-            <div className="p-10 relative h-full flex flex-col items-center gap-8 text-center text-white">
-                <div className="relative w-full h-[250px] rounded-lg overflow-hidden">
+            <div className="p-4 sm:p-6 md:p-10 relative h-full flex flex-col items-center gap-8 text-center text-white">
+                <div className="relative w-full h-[350px] rounded-lg overflow-hidden">
                     <img
                         src={CallNowImage}
                         alt="Call now background"
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover"
                     />
                     <div className="absolute top-0 left-0 h-[250px] w-[250px] transform rotate-45 -translate-x-1/2 -translate-y-1/2 bg-secondary/80"></div>
                     <div className="absolute top-0 left-0 h-[280px] w-[280px] transform rotate-45 -translate-x-1/2 -translate-y-1/2 bg-secondary/40"></div>

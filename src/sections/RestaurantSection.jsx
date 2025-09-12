@@ -17,10 +17,10 @@ import features from "../data/features";
 
 function RestaurantSection() {
     return (
-        <div className="bg-gray-100 relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10 py-28 px-2 sm:px-12 md:px-16">
+        <div className="bg-gray-100 relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10 section-padding">
             <div className="flex flex-col items-start gap-4 sm:gap-8">
                 <BatchText text="Food & Drink" />
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900">
+                <h2 className="heading-text font-extrabold text-gray-900">
                     <AnimatedText
                         text="Quality Food And Drink Your |Trip Are Enjoyable"
                         textColor="text-gray-900"
@@ -71,11 +71,12 @@ function RestaurantSection() {
                 ))}
                 <motion.div
                     initial={{ y: 0 }}
-                    animate={{ y: [0, -20, 0] }}
+                    animate={{ y: [0, 10, 0] }}
                     transition={{
-                        duration: 1.5,
+                        duration: 2,
+                        ease: "backInOut",
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        repeatDelay: 0.5,
                     }}
                     className="absolute bottom-10 left-[50%] translate-x-[-50%] min-w-[200px] px-2 py-4 sm:p-6 bg-white rounded-lg flex flex-col gap-4 justify-center items-center z-10">
                     <h4 className="text-lg text-primary">Popular Clients</h4>

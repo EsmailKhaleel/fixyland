@@ -9,16 +9,16 @@ import staff8 from "../assets/staff-8.jpg";
 
 const staff = [
     {
-        id: 2,
+        id: 1,
         name: "Arnold Taylor",
         position: "Room Service",
-        image: staff2,
+        image: staff1,
     },
     {
-        id: 1,
+        id: 2,
         name: "Michael Dean",
         position: "Chef Master",
-        image: staff1,
+        image: staff2,
     },
     {
         id: 3,

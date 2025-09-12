@@ -1,6 +1,7 @@
 import { FaBed, FaBath } from 'react-icons/fa';
-import { FaUsers, FaArrowRightLong } from "react-icons/fa6";
+import { FaUsers } from "react-icons/fa6";
 import MainButton from './ui/MainButton';
+import IconLabel from './ui/IconLabel';
 
 function RoomCard2({ room }) {
     const handleMouseLeave = (e) => {
@@ -36,18 +37,18 @@ function RoomCard2({ room }) {
 
                 {/* Amenities */}
                 <div className="flex items-center space-x-4 sm:space-x-6 mb-3 sm:mb-4 text-gray-600">
-                    <div className="flex items-center space-x-1">
-                        <FaUsers className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
-                        <span className="text-sm sm:text-md">{room.guests}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                        <FaBed className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
-                        <span className="text-sm sm:text-md">{room.beds}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                        <FaBath className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
-                        <span className="text-sm sm:text-md">{room.bath}</span>
-                    </div>
+                    {[
+                        { icon: FaUsers, value: room.guests },
+                        { icon: FaBed, value: room.beds },
+                        { icon: FaBath, value: room.bath },
+                    ].map((amenity, index) => (
+                        <IconLabel
+                            key={index}
+                            icon={amenity.icon}
+                            label={amenity.value}
+                            textSize='text-sm sm:text-base'
+                        />
+                    ))}
                 </div>
 
                 {/* Description */}

@@ -1,4 +1,4 @@
-import { FaCalendar } from "react-icons/fa"
+import { FaRegCalendar } from "react-icons/fa6"
 import MainButton from "../components/ui/MainButton"
 import Input from "../components/ui/Input";
 import Select from "../components/ui/Select";
@@ -19,7 +19,7 @@ function BookingForm() {
             placeholder="Select Date"
           >
             <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
-              <FaCalendar className="text-gray-700" />
+              <FaRegCalendar className="text-gray-700" />
             </div>
           </Input>
           <Input
@@ -28,7 +28,7 @@ function BookingForm() {
             placeholder="Select Date"
           >
             <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
-              <FaCalendar className="text-gray-700" />
+              <FaRegCalendar className="text-gray-700" />
             </div>
           </Input>
 

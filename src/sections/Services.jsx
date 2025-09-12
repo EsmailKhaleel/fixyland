@@ -2,39 +2,26 @@ import { useState } from "react";
 import ServiceCard from "../components/ServiceCard";
 import AnimatedText from "../components/ui/AnimatedText";
 import MainButton from "../components/ui/MainButton";
-import PoolIcon from "../components/ui/PoolIcon";
-import SwimIcon from "../components/ui/SwimIcon";
-import TreadmillIcon from "../components/ui/TreadmillIcon";
-import SpaIcon from "../components/ui/SpaIcon";
-import ServiceImage1 from "../assets/services-1.jpg";
-import ServiceImage2 from "../assets/services-2.jpg";
-import ServiceImage3 from "../assets/services-3.jpg";
-import ServiceImage4 from "../assets/services-4.jpg";
 import Bg from "../assets/bg-shape-1.png";
 import BatchText from "../components/ui/BatchText";
 import FadeIn from "../components/ui/FadeIn";
+import services from "../data/services";
 
-const services = [
-  { icon: TreadmillIcon, label: "Fitness Center", image: ServiceImage1 },
-  { icon: PoolIcon, label: "Jacuzzi", image: ServiceImage2 },
-  { icon: SwimIcon, label: "Swimming Pool", image: ServiceImage3 },
-  { icon: SpaIcon, label: "Spa Treatments", image: ServiceImage4 },
-];
 function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
 
 
   return (
-    <section className="w-full relative flex flex-col gap-10 bg-gray-100">
+    <section className="w-full relative flex flex-col gap-10 bg-gray-100 section-padding">
       <img src={Bg} alt="bg" className="absolute bottom-0 left-0 w-1/2 h-1/2 object-cover" />
-      <div className="relative w-full flex lg:flex-row flex-col gap-16 pt-28 px-2 sm:px-12 md:px-16 pb-16">
+      <div className="relative w-full flex lg:flex-row flex-col gap-16">
 
         <div className="flex flex-col items-start gap-4 md:gap-8 shrink">
           <BatchText text="Hotel Services" />
           <AnimatedText
             text="Get The Best Hotel |Fixyland Services"
             textColor="black"
-            className="text-2xl sm:text-4xl font-extrabold tracking-widest"
+            className="heading-text font-extrabold tracking-widest"
           />
           <p className="text-lg text-gray-600 self-start">
             Nulla vitae ex nunc. Morbi quis purus convallis, fermentum hioon metus volutpat design sodales purus. Nunc quis an mauris etion eros vulputate mattis Nulla vitae ex nunc.
@@ -50,18 +37,20 @@ function Services() {
           </div>
         </div>
 
-        <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              service={service}
-              active={activeIndex === index}
-              onActivate={() => setActiveIndex(index)}
-            />
+        <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {services.slice(0, 4).map((service, index) => (
+            <FadeIn key={index} delay={0.2 + index * 0.1}>
+              <ServiceCard
+                key={index}
+                service={service}
+                active={activeIndex === index}
+                onActivate={() => setActiveIndex(index)}
+              />
+            </FadeIn>
           ))}
         </div >
       </div>
-      <FadeIn className="w-full pb-16 text-black text-sm sm:text-md text-center self-center" delay={0.4}>
+      <FadeIn className="w-full pt-16 text-gray-600 text-base text-center self-center" delay={0.4}>
         <footer>
           Call us Today: (+1) 987 654 3210 &nbsp;&nbsp; OR &nbsp;&nbsp; Email us: info@domain.com
         </footer>

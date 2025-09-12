@@ -15,27 +15,26 @@ import TestimonialCard from '../components/TestimonialCard'
 
 function TestimonialSection() {
     return (
-        <div className="bg-gray-100 w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-start gap-22 lg:gap-24 xl:gap-36 py-28 px-2 sm:px-12 md:px-16">
-            <div className='relative mr-20 lg:ml-11'>
+        <div className="bg-gray-100 w-full grid grid-cols-1 xl:grid-cols-2 items-center justify-start gap-22 lg:gap-24 xl:gap-36 py-28 section-padding">
+            <div className='relative'>
                 <AnimatedImage
                     src={Img1}
                     alt="Luxury Hotel"
-                    wrapperClass="relative overflow-hidden rounded-xl scale-100 lg:scale-115"
-                    className="w-full min-h-[300px] md:h-[500px] lg:h-auto object-cover"
+                    wrapperClass="relative overflow-hidden rounded-xl"
+                    className="w-full min-h-[300px] md:h-[600px] object-cover"
                 />
                 <motion.div
-                    animate={{ y: [0, 8 , 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "backIn" }}
-                    className='absolute bottom-20 -right-10 lg:-right-20 border-4 border-white w-[30%] h-[30%] lg:w-[35%] lg:h-[35%] rounded-xl scale-100 lg:scale-115'>
+                    animate={{ y: [0, 10 , 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                    className='absolute -bottom-10 sm:bottom-10 md:bottom-20 right-2 sm:-right-4 md:-right-8 lg:-right-10 xl:-right-20 border-4 border-white w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-xl'>
                     <motion.div
-                        initial={{ translateX: "100%", opacity: 0 }}
-                        whileInView={{ translateX: 0, opacity: 1 }}
+                        initial={{ translateX: "100%"}}
+                        whileInView={{ translateX: 0 }}
                         viewport={{ once: true, amount: 0.5 }}
                         transition={{ duration: 0.4, ease: "linear" }}
                         className="w-full h-full bg-white"
                     >
                         <img src={Img2} alt="Luxury Hotel" className="w-full h-full object-cover rounded-xl" />
-
                     </motion.div>
                 </motion.div>
             </div>
@@ -43,18 +42,18 @@ function TestimonialSection() {
                 <BatchText text={"Testimonials"} />
                 <AnimatedText
                     text={'Amazing Feedback Say |About Services'}
-                    className='text-2xl sm:text-4xl font-extrabold'
+                    className='heading-text font-extrabold'
                 />
                 <div className='w-full mt-8'>
                     <Swiper
                         modules={[Autoplay]}
-                        spaceBetween={30}
+                        spaceBetween={15}
                         slidesPerView={1}
                         loop={true}
                         autoplay={{
                             delay: 3000,
                             disableOnInteraction: false,
-                            pauseOnMouseEnter: true,
+                            pauseOnMouseEnter: false,
                         }}
                         className="w-full"
                     >

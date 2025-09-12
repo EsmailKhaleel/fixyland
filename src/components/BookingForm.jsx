@@ -1,4 +1,4 @@
-import { FaCalendar } from "react-icons/fa"
+import { FaRegCalendar } from "react-icons/fa6"
 import Input from "./ui/Input"
 import Select from "./ui/Select"
 import MainButton from "./ui/MainButton"
@@ -57,7 +57,7 @@ function BookingForm({ btnLabel = "Book Appointment" }) {
                 bgColor="bg-primary-light"
             >
                 <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
-                    <FaCalendar className="text-gray-700" />
+                    <FaRegCalendar className="text-gray-700" />
                 </div>
             </Input>
             <Input
@@ -68,7 +68,7 @@ function BookingForm({ btnLabel = "Book Appointment" }) {
                 bgColor="bg-primary-light"
             >
                 <div className="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none">
-                    <FaCalendar className="text-gray-700" />
+                    <FaRegCalendar className="text-gray-700" />
                 </div>
             </Input>
 
