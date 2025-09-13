@@ -24,9 +24,9 @@ function RoomsSection() {
                             spaceBetween={15}
                             loop={true}
                             slidesPerView={
-                                width >= 1024
+                                width >= 1280
                                     ? 3
-                                    : width >= 768
+                                    : width >= 960
                                         ? 2
                                         : 1
                             }

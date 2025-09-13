@@ -12,10 +12,10 @@ function Appointment() {
                 <AnimatedText
                     text="Make An Appointment"
                     textColor="black"
-                    className="heading-text font-extrabold tracking-wide"
+                    className="heading-text font-extrabold tracking-wide justify-center"
                 />
             </div>
-            <div className="w-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-12">
+            <div className="w-full grid grid-cols-1 xl:grid-cols-[4fr_3fr] 2xl:grid-cols-[2fr_1fr] gap-12">
                 <FadeIn direction="up" delay={0.2}>
                     <BookingForm btnLabel="Book Appointment"/>
                 </FadeIn>

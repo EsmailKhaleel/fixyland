@@ -12,13 +12,13 @@ function ServiceDetails() {
             <section className="relative w-full overflow-hidden section-padding bg-primary-light grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-10">
                     <ServiceData />
                     <div className="w-full flex flex-col gap-6 lg:gap-10">
-                        <FadeIn direction="up" delay={0.6}>
+                        <FadeIn direction="up" delay={0.2}>
                             <CategoriesList />
                         </FadeIn>
-                        <FadeIn direction="up" delay={0.8}>
+                        <FadeIn direction="up" delay={0.4}>
                             <CallNowCard />
                         </FadeIn>
-                        <FadeIn direction="up" delay={1}>
+                        <FadeIn direction="up" delay={0.6}>
                             <DownloadCard />
                         </FadeIn>
                     </div>

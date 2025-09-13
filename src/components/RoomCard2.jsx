@@ -15,7 +15,11 @@ function RoomCard2({ room }) {
     return (
         <div className="bg-white w-full max-w-lg overflow-hidden flex flex-col gap-3 sm:gap-2 rounded-lg ">
             {/* Image with Price Badge */}
-            <div className="group relative mb-3 sm:mb-4 overflow-clip" onMouseLeave={handleMouseLeave}>
+            <div
+                onTouchEnd={handleMouseLeave}
+                onMouseLeave={handleMouseLeave}
+                className="group relative mb-3 sm:mb-4 overflow-clip"
+            >
                 <img
                     src={room.image}
                     alt={room.title}

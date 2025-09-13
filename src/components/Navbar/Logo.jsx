@@ -2,7 +2,7 @@ import LogoImg from '../../assets/Logo.svg';
 
 function Logo({ isSticky = false }) {
     return (
-        <div className={`w-85 
+        <div className={`w-85 self-start
         ${isSticky ? 'h-16 sm:h-20 md:h-24' : 'h-20 sm:h-24 md:h-26'} 
         flex items-center`}
         >

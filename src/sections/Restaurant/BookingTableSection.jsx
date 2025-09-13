@@ -18,7 +18,7 @@ function BookingTableSection() {
           Booking request <i className="text-secondary">(+1) 987 654 3210</i> or fill out the booking form.
         </p>
       </FadeIn>
-      <div className='w-full max-w-2/3 bg-primary/10 rounded-lg overflow-hidden'>
+      <div className='w-full max-w-5xl bg-primary/10 rounded-lg overflow-hidden'>
         <BookingForm btnLabel="Book A Table" />
       </div>
     </div>

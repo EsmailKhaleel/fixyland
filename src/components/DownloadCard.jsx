@@ -41,6 +41,7 @@ function DownloadCard() {
                             variants={itemVariants}
                             initial="initial"
                             whileHover="hover"
+                            whileTap="hover"
                             className="relative flex items-center justify-between py-3 px-4 rounded cursor-pointer"
                         >
                             <div className="flex items-center gap-3">

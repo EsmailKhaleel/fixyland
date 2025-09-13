@@ -18,8 +18,8 @@ function Clents() {
         <div className="w-full rounded-lg overflow-hidden">
             <Swiper
                 modules={[Autoplay]}
-                spaceBetween={20}
-                slidesPerView={6}
+                spaceBetween={15}
+                slidesPerView={3}
                 loop={true}
                 speed={2000}
                 autoplay={{

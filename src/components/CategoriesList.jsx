@@ -40,6 +40,7 @@ function CategoriesList() {
                             variants={itemVariants}
                             initial="initial"
                             whileHover="hover"
+                            whileTap="hover"
                             className="relative group flex items-center justify-between py-3 px-4 rounded cursor-pointer"
                         >
                             <motion.span className="font-medium">{category}</motion.span>

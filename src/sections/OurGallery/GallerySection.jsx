@@ -19,7 +19,7 @@ function GallerySection() {
     return (
         <section className="relative bg-primary-light w-full section-padding flex flex-col justify-center items-center gap-8">
             {/* Filter Buttons */}
-            <div className="flex gap-6 flex-wrap justify-center">
+            <div className="flex gap-4 sm:gap-6 flex-wrap justify-center">
                 {["Show All", ...categories].map((category) => (
                     <button
                         key={category}
@@ -27,7 +27,7 @@ function GallerySection() {
                         className={`${activeCategory === category
                             ? "bg-primary text-white"
                             : "bg-white text-primary"
-                            } text-lg px-6 py-2 rounded cursor-pointer transition-all duration-400`}
+                            } text-lg px-4 py-1 sm:px-6 sm:py-2 rounded cursor-pointer transition-all duration-400`}
                     >
                         {category}
                     </button>
@@ -36,7 +36,7 @@ function GallerySection() {
             </div>
 
             {/* Gallery Grid */}
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
                 <AnimatePresence mode="popLayout">
                     {filteredGallery.map((item) => (
                         <motion.div
@@ -47,7 +47,7 @@ function GallerySection() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0 }}
                             transition={{ ease: "easeInOut", duration: 0.4, layout: { duration: 0.3 } }}
-                            className="relative group w-full h-[400px] rounded-lg overflow-hidden"
+                            className="relative group w-full h-[200px] sm:h-[300px] lg:h-[400px] rounded-lg overflow-hidden"
                         >
                             <img
                                 src={item.image}

@@ -21,7 +21,7 @@ function RestaurantSection({ badgeText = "Fresh & Healthy", title = "Delicious M
       </div>
 
       {/* Two-column layout */}
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 md:gap-x-12 xl:gap-x-40 relative">
+      <div className="mt-12 grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-x-12 xl:gap-x-40 relative">
         {/* Vertical Dashed Line */}
         <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 border border-dashed border-gray-400"></div>
 

@@ -71,13 +71,8 @@ function RestaurantSection() {
                 ))}
                 <motion.div
                     initial={{ y: 0 }}
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{
-                        duration: 2,
-                        ease: "backInOut",
-                        repeat: Infinity,
-                        repeatDelay: 0.5,
-                    }}
+                    animate={{ y: [0, 10 , 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                     className="absolute bottom-10 left-[50%] translate-x-[-50%] min-w-[200px] px-2 py-4 sm:p-6 bg-white rounded-lg flex flex-col gap-4 justify-center items-center z-10">
                     <h4 className="text-lg text-primary">Popular Clients</h4>
                     <div className="flex items-center">

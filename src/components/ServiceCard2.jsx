@@ -16,6 +16,7 @@ function ServiceCard2({ service }) {
         <motion.div
             initial="initial"
             whileHover="hover" // triggers children variants
+            whileTap="hover"
             className="group relative w-full bg-white rounded-lg flex flex-col items-center text-center overflow-hidden"
             >
             <div className="relative w-full h-[300px] overflow-hidden">

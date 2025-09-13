@@ -1,8 +1,11 @@
-import { FaPlus } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { FaPlus, FaMinus } from "react-icons/fa6";
+import { AnimatePresence, motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useState } from "react";
+
 function StaffCard({ employee }) {
+    const [isIconsVisible, setIsIconsVisible] = useState(false);
     const handleMouseLeave = (e) => {
         const element = e.currentTarget;
         element.classList.add('not-hover');
@@ -14,18 +17,47 @@ function StaffCard({ employee }) {
         <div className="mt-8 relative flex flex-col items-start gap-4 bg-white rounded-xl z-0 max-w-[400px]">
             <div
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleMouseLeave}
                 className="relative overflow-hidden group rounded-t-xl"
             >
                 <img src={employee.image} alt="Staff" className="w-full h-full object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-all duration-500 ease-in-out" />
                 <span className={`absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-focus:animate-ripple group-active:animate-ripple group-[.not-hover]:animate-rippleReverse origin-center transition-all ease-out`}></span>
-                <button className="group absolute bottom-4 right-4 bg-primary rounded-md p-1 sm:p-2 cursor-pointer">
-                    <FaPlus className="w-5 h-5 text-white" />
+                <button
+                    onClick={() => setIsIconsVisible(!isIconsVisible)}
+                    className="absolute bottom-4 right-4 bg-primary rounded-md p-1 sm:p-2 cursor-pointer transition-all duration-300"
+                >
                     <motion.div
-                        className="absolute bottom-[calc(100%+8px)] right-0 flex flex-col gap-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus:opacity-100 group-focus:visible group-active:opacity-100 group-active:visible trsnsform translate-y-3 group-hover:translate-y-0 group-focus:translate-y-0 group-active:translate-y-0 transition-all duration-400"
+                        initial={false}
+                        animate={{ rotate: isIconsVisible ? 180 : 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                        <AnimatePresence mode="wait">
+                            {isIconsVisible ? (
+                                <FaMinus className="w-5 h-5 text-white" />
+                            ) : (
+                                <FaPlus className="w-5 h-5 text-white" />
+                            )}
+                        </AnimatePresence>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, visibility: "hidden" }}
+                        animate={{
+                            opacity: isIconsVisible ? 1 : 0,
+                            y: isIconsVisible ? 0 : 20,
+                            visibility: isIconsVisible ? "visible" : "hidden"
+                        }}
+                        transition={{ duration: 0.4 }}
+                        className="absolute bottom-[calc(100%+8px)] right-0 flex flex-col gap-2"
                     >
                         {[FaFacebook, FaXTwitter, FaInstagram, FaYoutube].map((Icon, i) => (
                             <motion.div
                                 key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{
+                                    opacity: isIconsVisible ? 1 : 0,
+                                    y: 0
+                                }}
+                                transition={{ duration: 0.4, delay: i * 0.1 }}
                                 className="bg-white text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white active:bg-primary active:text-white rounded-md p-1 sm:p-2 cursor-pointer transition-all duration-300"
                             >
                                 <Icon className="w-5 h-5" />

@@ -22,8 +22,8 @@ function FaqsSection() {
                     className="heading-text text-center font-extrabold justify-center"
                 />
             </div>
-            <div className="w-full grid grid-cols-[2fr_1fr] gap-10">
-                <div className="bg-gray-100 w-full flex flex-col gap-4 p-6 sm:p-10 rounded-lg">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10">
+                <div className="bg-gray-100 w-full flex flex-col gap-4 p-4 sm:p-10 rounded-lg">
                     {faqsData.map((faq, i) => (
                         <FadeIn key={i} direction="up" delay={i * 0.1}>
                             <Accordion

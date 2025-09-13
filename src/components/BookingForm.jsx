@@ -5,7 +5,7 @@ import MainButton from "./ui/MainButton"
 
 function BookingForm({ btnLabel = "Book Appointment" }) {
     return (
-        <form className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-8 bg-gray-100 rounded-lg">
+        <form className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 sm:p-8 bg-gray-100 rounded-lg">
             <Input
                 type="text"
                 placeholder="Ex. first name"

@@ -30,7 +30,7 @@ function TestimonialSection() {
                     <motion.div
                         initial={{ translateX: "100%"}}
                         whileInView={{ translateX: 0 }}
-                        viewport={{ once: true, amount: 0.5 }}
+                        viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.4, ease: "linear" }}
                         className="w-full h-full bg-white"
                     >

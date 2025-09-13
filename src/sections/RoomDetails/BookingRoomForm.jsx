@@ -43,7 +43,7 @@ function BookingRoomForm() {
         options={["Single Room", "Double Room", "Suite", "Deluxe Room", "Family Room"]}
       />
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Select
           label="Adults"
           defaultValue="Select Adults"

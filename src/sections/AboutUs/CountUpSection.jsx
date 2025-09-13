@@ -37,19 +37,23 @@ function StatsSection() {
       ref={sectionRef}
       className="w-full"
     >
-      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center">
+      <div className="mx-auto grid grid-cols-2 lg:grid-cols-4 text-center">
         {stats.map((stat, index) => (
           <div 
           key={index} 
-          className={`flex flex-col items-center ${index < stats.length - 1 ? 'border-dashed border-b gap-4 py-4 sm:border-b-0 sm:border-r border-white' : 'pb-0 pt-4'}`}
+          className={`flex flex-col items-center gap-4 py-4
+            ${index === 0 ? 'border-dashed border-b border-r border-white' : ''}
+            ${index === 1 ? 'border-dashed border-b border-white' : ''}
+            ${index === 2 ? 'border-dashed border-r border-white' : ''}
+            lg:border-b-0 ${index < stats.length - 1 ? 'lg:border-r lg:border-dashed lg:border-white' : ''}`}
           >
-            <h3 className="marquee-text text-primary text-6xl font-extrabold flex items-center">
+            <h3 className="marquee-text text-primary text-5xl md:text-6xl font-extrabold flex items-center">
               {start && (
                 <CountUp end={stat.end} duration={3} />
               )}
               <span className="ml-1">+</span>
             </h3>
-            <p className="mt-2 text-2xl font-normal text-white">
+            <p className="mt-2 text-lg md:text-2xl font-normal text-white">
               {stat.label}
             </p>
           </div>

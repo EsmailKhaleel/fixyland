@@ -6,12 +6,14 @@ import ServiceMainImage from '../../assets/services-details-1.jpg'
 import ServiceImage1 from '../../assets/services-details-2.jpg'
 import ServiceImage2 from '../../assets/services-details-3.jpg'
 import AnimatedImage from '../../components/ui/AnimatedImage'
-import { FaRegCircleCheck } from 'react-icons/fa6'
 import faqsData from '../../data/faqs'
 import Accordion from '../../components/ui/Accordion'
 import { useState } from 'react'
 import AnimatedImage2 from '../../components/ui/AnimatedImage2'
 import TitleDescription from '../../components/TitleDescription'
+import CheckItem from '../../components/ui/CheckItem'
+import { FaRegCircleCheck } from 'react-icons/fa6'
+
 function ServiceData() {
     const [isOpen, setIsOpen] = useState(null);
     return (
@@ -26,7 +28,7 @@ function ServiceData() {
             <div className="flex flex-col gap-3">
                 <AnimatedText
                     text={"Fitness Center In Hotel Fixyland"}
-                    className="text-[40px] font-extrabold dashed-border w-fit"
+                    className="text-[30px] sm:text-[40px] font-extrabold dashed-border w-fit py-2 px-2 sm:py-6 sm:px-3"
                     delay={0.2}
                 />
                 <BigDashedLine />
@@ -56,10 +58,7 @@ function ServiceData() {
                 <ul className="list-disc flex flex-col gap-2">
                     {[...roomDetails.rules.policies, ...roomDetails.rules.policies].map((policy, index) => (
                         <FadeIn key={index} direction="up" delay={index * 0.1}>
-                            <li key={index} className="text-gray-600 flex items-start text-lg gap-2">
-                                <FaRegCircleCheck className="text-primary mr-2 bg-primary/10 rounded-full w-6 h-6" />
-                                {policy}
-                            </li>
+                            <CheckItem key={index} icon={FaRegCircleCheck} text={policy} />
                         </FadeIn>
                     ))}
                 </ul>

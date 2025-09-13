@@ -9,7 +9,7 @@ function Accordion({ isOpen, setIsOpen, question, answer }) {
             {/* Header */}
             <div
                 onClick={() => setIsOpen(isOpen === question ? "" : question)}
-                className="flex items-center justify-between gap-2 cursor-pointer p-6"
+                className="flex items-center justify-between gap-2 cursor-pointer p-4 sm:p-6"
             >
                 <h4 className="font-semibold text-base text-gray-900">{question}</h4>
 
@@ -19,14 +19,18 @@ function Accordion({ isOpen, setIsOpen, question, answer }) {
                     transition={{ duration: 0.3 }}
                     className="relative flex items-center justify-center"
                 >
-                    <span className="absolute w-10 h-10 flex items-center justify-center 
-                           rounded-full transition-all duration-300 
-                           scale-0 group-hover:scale-100 bg-primary z-0"></span>
+                    <span
+                        className={`absolute w-10 h-10 flex items-center justify-center 
+                        rounded-full transition-all duration-300 
+                        ${isOpen === question ? "scale-100" : "scale-0"} 
+                        bg-primary z-0`}
+                    >
+                    </span>
 
                     {isOpen === question ? (
-                        <FaMinus className="w-4 h-4 text-black group-hover:text-white z-10" />
+                        <FaMinus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} group-hover:text-white z-10`} />
                     ) : (
-                        <FaPlus className="w-4 h-4 text-black group-hover:text-white z-10" />
+                        <FaPlus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} group-hover:text-white z-10`} />
                     )}
                 </motion.div>
             </div>
@@ -46,7 +50,7 @@ function Accordion({ isOpen, setIsOpen, question, answer }) {
                         transition={{ duration: 0.2, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <p className="text-gray-600 text-md sm:text-lg leading-relaxed p-6">
+                        <p className="text-gray-600 text-base sm:text-lg leading-relaxed p-4 sm:p-6">
                             {answer}
                         </p>
                     </motion.div>

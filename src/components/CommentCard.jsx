@@ -7,24 +7,26 @@ function CommentCard({ author, date, comment, userImage, replies }) {
     return (
         <FadeIn direction="up" delay={0.3}>
             <div className="flex flex-col gap-6 bg-primary-light">
-                <div className="p-8 rounded-md">
-                    <div className="flex items-start gap-6">
+                <div className="p-4 sm:p-8 rounded-md">
+                    <div className="flex flex-col md:flex-row items-start gap-6">
                         <img
                             src={userImage}
                             alt={author}
                             className="w-28 h-auto rounded-md object-cover"
                         />
                         <div className="flex-1 flex flex-col gap-4 items-start">
-                            <div className="flex items-center gap-4">
+                            <div className="flex flex-col md:flex-row items-center md:gap-4">
                                 <h4 className="text-base text-gray-600">by <span className="font-semibold text-gray-900">{author}</span></h4>
-                                <div className="w-2 border-t-2" />
-                                <IconLabel
-                                    icon={FaClock}
-                                    label={date}
-                                    textColor="text-gray-500"
-                                    iconColor="text-primary"
-                                    textSize="text-sm"
-                                />
+                                <div className="flex items-center gap-2 ml-4 md:ml-0">
+                                    <div className="w-2 border-t-2 border-gray-500" />
+                                    <IconLabel
+                                        icon={FaClock}
+                                        label={date}
+                                        textColor="text-gray-500"
+                                        iconColor="text-primary"
+                                        textSize="text-sm"
+                                    />
+                                </div>
                             </div>
                             <p className="text-gray-600 leading-relaxed line-clamp-5">
                                 {comment}

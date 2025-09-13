@@ -23,15 +23,15 @@ function BlogCard({ blog }) {
             >{blog.title}</h3>
 
             {/* Amenities */}
-            <div className="flex items-center gap-6 mb-4 text-gray-600">
-                <div className="flex items-center gap-1">
+            <div className="flex sm:flex-row flex-col gap-2 items-start sm:items-center sm:gap-4 mb-4 text-gray-600">
+                <div className="flex items-center gap-2">
                     <BsCalendarDateFill className="w-4 h-4 text-primary" />
-                    <span className="text-md">{blog.date}</span>
+                    <span className="text-sm sm:text-base">{blog.date}</span>
                 </div>
-                <div className="bg-black h-[1px] w-5" ></div>
-                <div className="flex items-center gap-1">
+                <div className="sm:block hidden bg-black h-[1px] w-5" ></div>
+                <div className="flex items-center gap-2">
                     <FaUser className="w-4 h-4 text-primary" />
-                    <span className="text-md">{blog.role}</span>
+                    <span className="text-sm sm:text-base">{blog.role}</span>
                 </div>
             </div>
 

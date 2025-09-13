@@ -19,7 +19,7 @@ function ContactUs() {
         </section>
         <section
           style={{ backgroundImage: `url(${BackgroundShape})` }}
-          className="relative w-full overflow-hidden bg-primary z-0 pt-52 pb-32 -mt-35 md:-mt-52"
+          className="relative w-full overflow-hidden bg-primary z-0 pt-26 sm:pt-52 pb-10 md:pb-32 -mt-35 md:-mt-52"
         >
           <AddressSection />
         </section>

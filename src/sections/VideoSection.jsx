@@ -7,7 +7,7 @@ function VideoSection({ hasOverlay = true }) {
     return (
         <div
             ref={sectionRef}
-            className="relative w-full h-[400px] sm:h-[600px] overflow-hidden bg-fixed"
+            className="relative w-full h-[400px] sm:h-[600px] overflow-hidden"
             style={{
                 backgroundImage: `url(${Background})`,
                 backgroundSize: "cover",

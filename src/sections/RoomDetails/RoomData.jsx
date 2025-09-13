@@ -10,6 +10,7 @@ import BigDashedLine from "../../components/ui/BigDashedLine";
 import FadeIn from "../../components/ui/FadeIn";
 import Amenities from "../../components/Amenities";
 import TitleDescription from "../../components/TitleDescription";
+import CheckItem from "../../components/ui/CheckItem";
 
 function RoomData() {
     const sectionRef = useRef(null);
@@ -21,7 +22,7 @@ function RoomData() {
             <div className="flex flex-col gap-3">
                 <AnimatedText
                     text={"Luxury Double Bed"}
-                    className="text-[40px] font-extrabold dashed-border w-fit"
+                    className="text-[30px] sm:text-[40px] font-extrabold dashed-border w-fit py-2 px-2 sm:py-6 sm:px-3"
                     delay={0.2}
                 />
                 <BigDashedLine />
@@ -83,10 +84,7 @@ function RoomData() {
                     <span className="font-semibold text-gray-600 text-lg">Policies</span>
                     <ul className="list-disc pl-6 flex flex-col gap-2">
                         {roomDetails.rules.policies.map((policy, index) => (
-                            <li key={index} className="text-gray-600 flex items-start text-lg gap-2">
-                                <FaRegCircleCheck className="text-primary mr-2 bg-primary/10 rounded-full w-6 h-6" />
-                                {policy}
-                            </li>
+                            <CheckItem  key={index} icon={FaRegCircleCheck} text={policy}/>
                         ))}
                     </ul>
                 </div>

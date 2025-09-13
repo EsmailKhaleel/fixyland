@@ -11,10 +11,11 @@ import { motion } from "framer-motion"
 import About1 from "../../assets/about-2-1.jpg"
 import About2 from "../../assets/about-2-2.jpg"
 import Spoon from "../../assets/spoon.svg"
+import CheckItem from "../../components/ui/CheckItem"
 function Activities() {
     return (
         <section className="relative w-full overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-20 section-padding bg-primary-light">
-            <div className="flex flex-col items-start gap-4 sm:gap-8 pt-8 sm:pt-12">
+            <div className="flex flex-col items-start gap-4 sm:gap-6 pt-8 sm:pt-12">
                 <BatchText text="Luxury Hotel" />
                 <h2 className="heading-text font-extrabold text-gray-900">
                     <AnimatedText
@@ -40,21 +41,18 @@ function Activities() {
                     </FadeIn>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4 text-sm gap-y-4 md:gap-y-10 sm:mb-0 mb-10" >
+                <div className="flex flex-col gap-4" >
                     {features.map(({ id, description, delay }, index) => (
                         <FadeIn
                             key={id}
                             delay={delay}
-                            direction="left" className="flex items-center gap-2"
+                            direction="left"
                         >
-                            <div className="flex items-center justify-center self-start text-lg">
-                                <FaRegCircleCheck className="w-6 h-6 text-primary bg-primary/10 rounded-full overflow-hidden" />
-                            </div>
-                            <p className="text-gray-600 text-md">{description}</p>
+                            <CheckItem key={id} text={description.slice(0, 50).concat(".")} icon={FaRegCircleCheck} />
                         </FadeIn>
                     ))}
                 </div>
-                <FadeIn className="self-start">
+                <FadeIn className="self-start mt-8">
                     <MainButton
                         label="Discover More"
                         color="primary"
@@ -64,19 +62,21 @@ function Activities() {
                     />
                 </FadeIn>
             </div>
-            <div className="relative p-0 sm:p-4 gap-4 min-h-[400px]">
+            <div className="relative p-0 sm:p-4 gap-4 min-h-[400px] max-h-[700px]">
                 <AnimatedImage
                     src={About1}
                     alt="About Us Image"
-                    wrapperClass={`relative w-full h-full sm:h-[90%] overflow-hidden rounded-xl ml-auto max-w-[70%]`}
+                    wrapperClass={`relative w-full h-full sm:h-[90%] overflow-hidden rounded-xl ml-auto max-w-[90%]`}
                     className="w-full h-full object-cover"
                 />
-                <AnimatedImage
-                    src={About2}
-                    alt="About Us Image"
-                    wrapperClass={`absolute -bottom-10 sm:bottom-0 left-0 sm:w-[40%] sm:h-[50%] overflow-hidden rounded-xl`}
-                    className="w-full h-full object-cover"
-                />
+                <div className="absolute -bottom-10 sm:bottom-0 left-0 w-[200px] h-[200px] sm:w-[300px] sm:h-[300px]">
+                    <AnimatedImage
+                        src={About2}
+                        alt="About Us Image"
+                        wrapperClass={`overflow-hidden w-full h-full rounded-xl`}
+                        className="w-full h-full object-cover"
+                    />
+                </div>
                 <motion.div
                     initial={{ y: 0 }}
                     animate={{ y: [0, -20, 0] }}

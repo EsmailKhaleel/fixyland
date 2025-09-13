@@ -34,7 +34,7 @@ function BlogHeader({ blog }) {
       <div className="flex flex-col gap-3">
         <AnimatedText
           text={"Most Expensive Hotels Rooms in Your City"}
-          className="text-[40px] font-extrabold dashed-border w-fit"
+          className="text-[30px] sm:text-[40px] font-extrabold dashed-border w-fit py-2 px-2 sm:py-6 sm:px-3"
           delay={0.2}
         />
         <BigDashedLine />

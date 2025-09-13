@@ -8,7 +8,7 @@ function NavbarActions({ isSticky = false, isDrawerOpen, setIsDrawerOpen, setIsS
         <div className="flex gap-4 items-center mr-4">
             <div 
             onClick={() => setIsSearchDrawerOpen(prev => !prev)}
-            className={`items-center justify-center flex p-4 rounded-full ${isSticky ? 'bg-gray/10 focus:bg-gray/20 active:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 active:bg-white/20 hover:bg-white/20'} transition-all duration-300`}>
+            className={`items-center justify-center flex p-3 sm:p-4 rounded-full ${isSticky ? 'bg-gray/10 focus:bg-gray/20 active:bg-gray/20 hover:bg-gray/20' : 'bg-white/10 focus:bg-white/20 active:bg-white/20 hover:bg-white/20'} transition-all duration-300`}>
                 <IoSearchOutline className={`${isSticky ? 'text-black' : 'text-white'} cursor-pointer text-3xl`} />
             </div>
             <div
@@ -25,7 +25,7 @@ function NavbarActions({ isSticky = false, isDrawerOpen, setIsDrawerOpen, setIsS
             </div>
             <div
                 onClick={() => setIsDrawerOpen(prev => !prev)}
-                className={`xl:hidden cursor-pointer items-center justify-center flex p-2 rounded-sm bg-secondary transition-all duration-300`}>
+                className={`xl:hidden cursor-pointer items-center justify-center flex p-1 sm:p-2 rounded-sm bg-secondary transition-all duration-300`}>
                 <BurgerButton isDrawerOpen={isDrawerOpen} />
             </div>
         </div>

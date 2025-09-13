@@ -4,7 +4,7 @@ import FadeIn from "./ui/FadeIn";
 
 function RestaurantItem({ title, price, desc, badge, image, itemKey }) {
     return (
-        <div className="relative flex items-start gap-6">
+        <div className="relative flex items-start gap-4 sm:gap-6">
             {/* Image */}
             <AnimatedImage
                 bgColor="bg-white"
@@ -16,17 +16,17 @@ function RestaurantItem({ title, price, desc, badge, image, itemKey }) {
 
             {/* Content */}
             <FadeIn delay={0.3} direction="left" className="flex-1">
-                <div className="flex items-center gap-2">
+                <div className="flex flex-col sm:flex-row items-start gap-2 w-full">
                     {/* Title + Badge */}
                     <div className="flex items-center gap-2 whitespace-nowrap">
-                        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+                        <h3 className="text-lg sm:text-2xl font-bold text-gray-900">{title}</h3>
                         {badge && (
                             <span className="bg-secondary text-xs font-semibold px-2 py-0.5 rounded-sm">
                                 {badge}
                             </span>
                         )}
                     </div>
-                    <div className="flex-1 flex items-center ml-auto">
+                    <div className="flex-1 flex items-center self-end w-full">
                         {/* Dashed line */}
                         <motion.div
                             key={`${title}${itemKey}`}

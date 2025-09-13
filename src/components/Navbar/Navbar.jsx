@@ -32,9 +32,9 @@ function Navbar() {
           animate={{ y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
-          className={`${showSticky ? "fixed top-0" : "absolute"} z-60 w-full`}
+          className={`${showSticky ? "fixed top-0" : "relative"} z-60 w-full`}
         >
-          <div className={`relative z-50 ${showSticky ? "bg-white" : "bg-transparent"} flex justify-between items-center gap-4`}>
+          <div className={`relative z-50 ${showSticky ? "bg-white/80" : "bg-transparent"} max-h-[70px] sm:max-h-[80px] flex justify-between items-center gap-4`}>
             <Logo isSticky={showSticky} />
             <NavBarMenu isSticky={showSticky} />
             <NavbarActions

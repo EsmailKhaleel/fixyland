@@ -26,7 +26,6 @@ const menuItems = [
       { label: 'Gallery', link: '/our-gallery' },
       { label: 'Pricing Plan', link: '/our-pricing' },
       { label: '404 Page', link: '/error' },
-      { label: 'Coming Soon', link: '/coming-soon' },
       { label: 'FAQ', link: '/faq\'s' },
       {
         label: 'Hotel Staff',

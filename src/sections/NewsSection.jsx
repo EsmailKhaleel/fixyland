@@ -11,7 +11,7 @@ function NewsSection() {
                 <BatchText text={"Hotel News"} />
                 <AnimatedText text="Get More Update For Flxyland" textColor="black" className="text-4xl text-center font-extrabold justify-center" />
             </div>
-            <div className='w-full bg-primary/10 px-10 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch'>
+            <div className='w-full bg-primary/10 px-10 py-10 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 items-stretch'>
                 {News.slice(0, 3).map((blog) => (
                     <FadeIn key={blog.id} delay={blog.id * 0.1} direction="left">
                         <BlogCard blog={blog} />
