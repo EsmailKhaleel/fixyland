@@ -31,7 +31,7 @@ function GalleryCard() {
               </div>
               <div
                 className="bg-primary/70 absolute inset-0 transition-all duration-300 
-                  z-[2] origin-top 
+                  z-[2] origin-top rounded-[6px]
                   group-hover:opacity-100 group-hover:scale-y-100 group-focus:opacity-100 group-focus:scale-y-100 group-active:opacity-100 group-active:scale-y-100 
                   opacity-0 scale-y-0"
               >

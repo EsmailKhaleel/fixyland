@@ -31,7 +31,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
+        stroke="black"
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -44,7 +44,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
           // visual props
-          stroke="currentColor"
+          stroke="black"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
@@ -60,7 +60,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           initial={isDrawerOpen ? "open" : "closed"}
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
-          stroke="currentColor"
+          stroke="black"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
@@ -72,7 +72,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           initial={isDrawerOpen ? "open" : "closed"}
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
-          stroke="currentColor"
+          stroke="black"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"

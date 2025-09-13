@@ -8,21 +8,20 @@ function HeroSection() {
         <section className="absolute inset-0 h-[850px] flex items-center justify-center">
             <div className="absolute inset-0 -z-10">
                 {/* black overlay */}
-                <div className="absolute inset-0 bg-black/60"></div>
                 <img
                     src={HeroImage}
                     alt="Hero"
-                    className="w-full h-full object-fill"
-                    style={{ filter: "brightness(0.5)" }}
+                    className="w-full h-full object-cover"
+                    style={{ filter: "brightness(0.4)" }}
                 />
             </div>
-            <div className="relative text-center text-white max-w-4xl mt-20 z-55">
-                <h1 className="text-4xl sm:text-5xl md:text-[82px] font-bold mb-4 flex flex-col items-center">
-                    Book With Best <br />
+            <div className="relative text-center text-white max-w-4xl z-55 flex flex-col gap-8">
+                <h1 className="text-4xl sm:text-5xl md:text-[70px] font-bold flex flex-col items-center">
+                    Book With The Best
                     <AnimatedText text={text} textColor='secondary' className="text-secondary" />
                 </h1>
-                <p className="text-lg mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc<br /> Duis egestas ac ante sed tincidunt.
+                <p className="text-lg max-w-[350px] md:max-w-3xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc Duis egestas ac ante sed tincidunt.
                 </p>
                 <div className="flex gap-4 justify-center flex-col sm:flex-row items-center">
                     <MainButton

@@ -6,7 +6,7 @@ function BlogNavigation() {
     <>
       <hr className="my-4 border-gray-300" />
       <FadeIn direction="up" delay={0.3}>
-        <div className="relative border flex justify-between items-center">
+        <div className="relative flex justify-between items-center">
           <div className="flex flex-col gap-1 items-start">
             <span className="text-base font-normal text-primary">Prev Post</span>
             <h3 className="text-lg sm:text-xl font-bold">

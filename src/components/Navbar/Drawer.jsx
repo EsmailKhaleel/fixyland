@@ -6,7 +6,7 @@ function Drawer({ setIsDrawerOpen }) {
   return (
     <DrawerBase setIsDrawerOpen={setIsDrawerOpen}>
       {menuItems.map((item, index) => (
-        <DrawerMenuItem key={index} item={item} />
+        <DrawerMenuItem key={index} item={item} setIsDrawerOpen={setIsDrawerOpen} />
       ))}
     </DrawerBase>
   );

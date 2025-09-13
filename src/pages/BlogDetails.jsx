@@ -12,7 +12,7 @@ import TagsCard from "../components/TagsCard"
 function BlogDetails() {
     return (
         <main>
-            <BreadcrumbSection title="Blog SideBar" />
+            <BreadcrumbSection title="Blog Details" />
             <section className="relative w-full overflow-hidden section-padding bg-primary-light grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-10">
                 <div className="w-full flex flex-col gap-6 lg:gap-10">
                     <BlogData />
