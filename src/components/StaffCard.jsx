@@ -40,7 +40,7 @@ function StaffCard({ employee }) {
                         </AnimatePresence>
                     </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, y: 20, visibility: "hidden" }}
+                        initial={{ opacity: 0, visibility: "hidden" }}
                         animate={{
                             opacity: isIconsVisible ? 1 : 0,
                             y: isIconsVisible ? 0 : 20,

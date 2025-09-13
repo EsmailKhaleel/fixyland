@@ -41,7 +41,7 @@ function RoomData() {
 
                 <AnimatedText
                     text={roomDetails.title}
-                    className="text-lg font-semibold dashed-border w-fit uppercase"
+                    className="text-lg font-semibold dashed-border px-3 py-1 w-fit uppercase"
                     delay={0.2}
                 />
                 <FadeIn direction="up" delay={0.2} className={"flex flex-col gap-2"}>

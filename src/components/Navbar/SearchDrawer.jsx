@@ -49,7 +49,7 @@ function SearchDrawer({ setIsSearchDrawerOpen }) {
 
                     }}
                 />
-                <IoSearch className="w-8 h-8 text-gray-700 text-2xl absolute top-1/2 right-4 -translate-y-1/2" />
+                <IoSearch className="w-6 h-6 sm:w-8 sm:h-8 text-gray-600 text-2xl absolute top-1/2 right-4 -translate-y-1/2" />
             </motion.div>
         </motion.div>
     )

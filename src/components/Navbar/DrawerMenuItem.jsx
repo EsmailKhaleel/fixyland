@@ -9,8 +9,8 @@ const DrawerMenuItem = ({ item, depth = 0, setIsDrawerOpen }) => {
   const hasChildren = item.children && item.children.length > 0;
 
   const handleNavigation = (link) => {
+    setIsDrawerOpen(false); // Close drawer first
     navigate(link);
-    setIsDrawerOpen(false);
   };
 
   return (
@@ -61,7 +61,12 @@ const DrawerMenuItem = ({ item, depth = 0, setIsDrawerOpen }) => {
             className="overflow-hidden"
           >
             {item.children.map((child, index) => (
-              <DrawerMenuItem key={index} item={child} depth={depth + 1} />
+              <DrawerMenuItem 
+                key={index} 
+                item={child} 
+                depth={depth + 1} 
+                setIsDrawerOpen={setIsDrawerOpen}
+              />
             ))}
           </motion.ul>
         )}

@@ -26,12 +26,12 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
       onClick={toggleDrawer}
       aria-label="Toggle menu"
       aria-expanded={isDrawerOpen}
-      className="relative w-10 h-10 flex items-center justify-center cursor-pointer"
+      className="relative w-10 h-10 flex items-center justify-center cursor-pointer text-gray-900"
     >
       <svg
         viewBox="0 0 24 24"
         fill="none"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -44,7 +44,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
           // visual props
-          stroke="black"
+          stroke="currentColor"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
@@ -60,7 +60,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           initial={isDrawerOpen ? "open" : "closed"}
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
-          stroke="black"
+          stroke="currentColor"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
@@ -72,7 +72,7 @@ export default function BurgerButton({ isDrawerOpen, toggleDrawer }) {
           initial={isDrawerOpen ? "open" : "closed"}
           animate={isDrawerOpen ? "open" : "closed"}
           transition={transition}
-          stroke="black"
+          stroke="currentColor"
           strokeWidth={2}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
