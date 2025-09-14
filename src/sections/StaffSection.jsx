@@ -18,10 +18,10 @@ function StaffSection() {
                 {/* Sttaff Card */}
                 {staff.map((item) => (
                     <FadeIn key={item.id} delay={item.id * 0.1} direction="up">
-                    <StaffCard
-                        key={item.id}
-                        employee={item}
-                    />
+                        <StaffCard
+                            key={item.id}
+                            employee={item}
+                        />
                     </FadeIn>
                 ))}
             </div>

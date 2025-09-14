@@ -25,7 +25,7 @@ function SubscribeSection() {
                         </div>
                     </div>
                 </div>
-                <div className="absolute left-0 bottom-0 top-0 z-0">
+                <div className="absolute left-0 bottom-0 sm:top-0 z-0">
                     <img src={BackgroundShape} className="w-full h-full object-cover" />
                 </div>
             </FadeIn>

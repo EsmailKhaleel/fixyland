@@ -17,7 +17,7 @@ function HeroSection() {
             </div>
             <div className="relative text-center text-white max-w-4xl z-55 flex flex-col gap-8">
                 <h1 className="text-4xl sm:text-5xl md:text-[70px] font-bold flex flex-col items-center">
-                    Book With The Best
+                    Book With Best
                     <AnimatedText text={text} textColor='secondary' className="text-secondary" />
                 </h1>
                 <p className="text-lg max-w-[350px] md:max-w-3xl">

@@ -9,7 +9,7 @@ const overlayVariants = {
     transition: {
       duration: 0.3,
       ease: "easeInOut",
-      delay: 0.3,
+      delay: 0.1,
       when: "beforeChildren"
     },
   },

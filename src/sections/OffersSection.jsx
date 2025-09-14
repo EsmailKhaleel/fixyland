@@ -10,7 +10,7 @@ function OffersSection() {
             <AnimatedText
                 text="Special Discount for Hotel & |Resort Booking"
                 textColor="black"
-                className="text-4xl text-center font-extrabold"
+                className="heading-text justify-center text-center font-extrabold"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 {offers.map((offer) => (

@@ -22,7 +22,7 @@ function BurgerButton({isDrawerOpen}) {
       <span
         className={[
           "absolute left-1/2 w-7 h-[3px] rounded-sm bg-gray-900",
-          "origin-center transition-all duration-200 ease-in-out",
+          "origin-center transition-all duration-300 ease-in-out",
           isDrawerOpen
             ? "top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0"
             : "top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-100"

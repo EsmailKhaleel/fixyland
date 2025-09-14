@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 
-function AnimatedCirclesShape() {
+function AnimatedCirclesShape({ position = 'absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3'}) {
   return (
     <motion.div
         animate={{ y: [0, 15, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 flex items-center w-56 h-56 "
+        className={`${position} flex items-center w-56 h-56`}
       >
         <div
           className="w-full h-full opacity-20 self-start"

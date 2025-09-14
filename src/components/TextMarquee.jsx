@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import StarIcon from "../assets/star.svg";
 import { motion } from "framer-motion";
 
-function TextMarquee({ items, bg, direction = "left", rotate = "-3deg" }) {
+function TextMarquee({ items, bg, direction = "left", rotate }) {
   return (
     <div
       className={`w-[200%] transform ${rotate} origin-center`}
@@ -33,7 +33,7 @@ function TextMarquee({ items, bg, direction = "left", rotate = "-3deg" }) {
             >
               <img src={StarIcon} alt="Star Icon" className="w-6 h-6" />
             </motion.div>
-            <span className={`marquee-text tracking-widest text-${bg}`}>
+            <span data-text={text} className={`marquee-text tracking-widest text-${bg}`}>
               {text}
             </span>
           </div>

@@ -29,6 +29,8 @@ import BlogSideBar from "../pages/BlogSideBar.jsx";
 import BlogDetails from "../pages/BlogDetails.jsx";
 import ContactUs from "../pages/ContactUs.jsx";
 
+import Home2 from "../pages/Home2.jsx";
+
 function Layout() {
   const location = useLocation();
   useEffect(() => {
@@ -52,6 +54,8 @@ function Layout() {
           <Routes>
             <Route path="*" element={<NotFound />} />
             <Route index path="/" element={<Home />} />
+            <Route path="/home-2" element={<Home2 />} />
+
             <Route path="/booking" element={<Booking />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/restaurant" element={<Restaurant />} />

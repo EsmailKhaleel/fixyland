@@ -294,3 +294,33 @@ ul.square-bullets {
 .group-hover\/card .line-effect.white-effect{
     background-image: linear-gradient(white, white), linear-gradient(white, white);
 }
+
+.swiper-pagination {
+  position: absolute !important;
+  top: 50% !important;
+  right: 1rem !important;
+  left: auto !important;   /* override Swiper’s inline left:0 */
+  width: auto !important;  /* override Swiper’s inline width:100% */
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.8rem !important;
+  z-index: 50 !important;
+}
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  @apply relative w-3 h-3 rounded-full bg-white opacity-50 transition-all duration-300 cursor-pointer;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  @apply opacity-100 bg-white;
+}
+
+.swiper-pagination .swiper-pagination-bullet::after {
+  content: "";
+  @apply absolute inset-0 rounded-full border border-white scale-0 transition-transform duration-300;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active::after {
+  @apply scale-200;
+}

@@ -4,9 +4,9 @@ import { BsCalendarDateFill } from "react-icons/bs";
 import MainButton from "./ui/MainButton";
 function BlogCard({ blog }) {
     return (
-        <div className="w-full max-w-lg overflow-hidden flex flex-col gap-2 h-full">
+        <div className="w-full max-w-lg overflow-hidden flex flex-col gap-4 h-full">
             {/* Image with Price Badge */}
-            <div className="relative mb-4 overflow-clip rounded-xl">
+            <div className="relative overflow-clip rounded-xl">
                 <img
                     src={blog.image}
                     alt={blog.title}
@@ -19,11 +19,11 @@ function BlogCard({ blog }) {
             </div>
 
             {/* Content */}
-            <h3 className="self-start relative text-lg sm:text-2xl capitalize font-bold text-gray-900 mb-3 sm:mb-4 before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full focus:before:w-full active:before:w-full before:transition-all before:duration-300 line-clamp-2"
+            <h3 className="self-start relative text-lg sm:text-2xl capitalize font-bold text-gray-900 before:content-[''] before:absolute before:left-0 before:top-full before:w-0 before:h-[1px] before:bg-primary hover:before:w-full focus:before:w-full active:before:w-full before:transition-all before:duration-300 line-clamp-2"
             >{blog.title}</h3>
 
             {/* Amenities */}
-            <div className="flex sm:flex-row flex-col gap-2 items-start sm:items-center sm:gap-4 mb-4 text-gray-600">
+            <div className="flex sm:flex-row flex-col gap-2 items-start sm:items-center sm:gap-4 text-gray-600">
                 <div className="flex items-center gap-2">
                     <BsCalendarDateFill className="w-4 h-4 text-primary" />
                     <span className="text-sm sm:text-base">{blog.date}</span>
@@ -36,7 +36,7 @@ function BlogCard({ blog }) {
             </div>
 
             {/* Description */}
-            <p className="text-gray-600 mb-6 text-sm sm:text-md leading-relaxed line-clamp-3 sm:line-clamp-2">
+            <p className="text-gray-600 text-sm sm:text-md leading-relaxed line-clamp-3 sm:line-clamp-2">
                 {blog.description}
             </p>
 

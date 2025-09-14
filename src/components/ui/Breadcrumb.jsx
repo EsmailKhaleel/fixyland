@@ -7,7 +7,7 @@ function Breadcrumb() {
     //   filter(x => x) is a shorthand for filter(x => x !== "")
 
     return (
-        <nav aria-label="breadcrumb" className="py-4">
+        <nav aria-label="breadcrumb">
             <ol className="flex items-center space-x-2">
                 <li className="inline-flex items-center">
                     <Link
@@ -22,7 +22,7 @@ function Breadcrumb() {
                     const isLast = index === pathnames.length - 1;
 
                     return (
-                        <li key={name} className="inline-flex items-center space-x-2 text-base">
+                        <li key={name} className="inline-flex items-center space-x-2 text-lg">
                             <IoIosArrowForward className="text-gray-400" />
                             {isLast ? (
                                 <span className="text-secondary font-medium capitalize cursor-text">
