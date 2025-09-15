@@ -23,10 +23,10 @@ function RoomCard2({ room }) {
                 <img
                     src={room.image}
                     alt={room.title}
-                    className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-transform duration-500 ease-in-out"
+                    className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-all duration-500 ease-in-out"
                     draggable={false}
                 />
-                <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-hover:opacity-0 group-[.not-hover]:animate-rippleReverse origin-center"></span>
+                <span className={`absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-focus:animate-ripple group-active:animate-ripple group-[.not-hover]:animate-rippleReverse origin-center transition-all ease-out`}></span>
 
                 <div className="absolute top-3 sm:top-4 lg:top-5 left-3 sm:left-4 lg:left-5 bg-primary text-white px-2 sm:px-3 py-1 rounded-sm text-sm sm:text-md font-medium">
                     {room.price} / Night

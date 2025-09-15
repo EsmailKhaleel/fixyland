@@ -18,10 +18,10 @@ function EventCard({ event }) {
                 <img
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover rounded-t-lg sm:rounded-t-xl transform group-hover:scale-110 group-hover:-rotate-3 focus:transform focus:scale-110 focus:-rotate-3 active:transform active:scale-110 active:-rotate-3 transition-all duration-500 ease-in-out"
+                    className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover rounded-t-lg sm:rounded-t-xl transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-all duration-500 ease-in-out"
                     draggable={false}
                 />
-                <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-hover:opacity-0 group-[.not-hover]:animate-rippleReverse origin-center"></span>
+                <span className={`absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-focus:animate-ripple group-active:animate-ripple group-[.not-hover]:animate-rippleReverse origin-center transition-all ease-out`}></span>
             </div>
 
             {/* Content */}

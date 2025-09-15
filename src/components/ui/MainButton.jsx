@@ -1,4 +1,4 @@
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 const textColors = {
   black: "text-black",
@@ -39,7 +39,7 @@ function MainButton({
       <span className={`relative z-20 transition-colors duration-500 ${hoverTextColors[textColorHover]}`}>
         {label}
       </span>
-      <FaArrowRightLong className={`${hoverTextColors[textColorHover]} relative z-20 transform -rotate-45 transition-all duration-400 group-hover:rotate-0 group-focus:rotate-0 group-active:rotate-0`} />
+      <FaArrowRight className={`${hoverTextColors[textColorHover]} relative z-20 transform -rotate-45 transition-all duration-400 group-hover:rotate-0 group-focus:rotate-0 group-active:rotate-0`} />
     </button>
   );
 }

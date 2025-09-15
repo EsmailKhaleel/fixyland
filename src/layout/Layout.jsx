@@ -33,7 +33,7 @@ import Footer2 from "../components/Footer/Footer2.jsx";
 
 function Layout() {
   const location = useLocation();
-  const isHome2 = location.pathname !== "/home-2";
+  const isHome2 = location.pathname === "/home-2";
 
   useEffect(() => {
     window.scrollTo({
@@ -58,7 +58,7 @@ function Layout() {
             <Route path="*" element={<NotFound />} />
             <Route index path="/" element={<Home />} />
             <Route path="/home-2" element={<Home2 />} />
-            
+
             <Route path="/booking" element={<Booking />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/restaurant" element={<Restaurant />} />
@@ -82,7 +82,7 @@ function Layout() {
             <Route path="/blog/blog-details" element={<BlogDetails />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
-          {isHome2 ?
+          {!isHome2 ?
             <Footer />
             : <Footer2 />}
         </motion.div>

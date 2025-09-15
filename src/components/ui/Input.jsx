@@ -10,7 +10,7 @@ function Input({ children, type, placeholder, label = "", labelColor = "text-bla
         }
     }, [isClicked]);
 
-    const className = `${bgColor} rounded-sm px-3 py-3 h-14 md:px-4 md:py-4 text-black w-full focus:outline-none focus:ring-1 focus:ring-primary active:outline-none active:ring-1 active:ring-primary hover:outline-none hover:ring-1 hover:ring-primary transition-all duration-500`;
+    const className = `appearance-none ${bgColor} rounded-sm px-3 py-3 h-14 md:px-4 md:py-4 text-black w-full focus:outline-none focus:ring-1 focus:ring-primary active:outline-none active:ring-1 active:ring-primary hover:outline-none hover:ring-1 hover:ring-primary transition-all duration-500`;
     return (
         <div
             onClick={() => setIsClicked(true)}

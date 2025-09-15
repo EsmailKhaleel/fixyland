@@ -9,7 +9,7 @@ import footerLinks from "../../data/footerLinks";
 export default function Footer2() {
     return (
         <footer
-            className="w-full text-white relative pt-16 md:pt-32 pb-10 bg-cover bg-center bg-no-repeat sm:bg-fixed"
+            className="w-full text-white relative pt-16 md:pt-32 pb-10 bg-cover bg-[10%] sm:bg-center bg-no-repeat sm:bg-fixed"
             style={{ backgroundImage: `url(${FooterBg})` }}
         >
             {/* overlay */}

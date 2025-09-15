@@ -12,7 +12,7 @@ function Services() {
 
   return (
     <section className="w-full relative flex flex-col gap-10 bg-gray-100 section-padding">
-      <img src={Bg} alt="bg" className="absolute bottom-0 left-0 w-1/2 h-1/2 object-cover" />
+      <img src={Bg} alt="bg" className="absolute bottom-0 left-0 w-1/2 object-cover" />
       <div className="relative w-full flex lg:flex-row flex-col gap-16">
 
         <div className="flex flex-col items-start gap-4 md:gap-8 shrink">

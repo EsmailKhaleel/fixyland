@@ -12,7 +12,7 @@ function RouteLoader() {
         setIsLoading(true);
         const timeout = setTimeout(() => {
             setIsLoading(false);
-        }, 800);
+        }, 1000);
 
         return () => clearTimeout(timeout);
     }, [location.pathname]);
@@ -24,8 +24,8 @@ function RouteLoader() {
                     key="route-spinner"
                     initial={{ opacity: 1, y: 0 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ y: -1000, opacity: 0 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    exit={{ y: -1000, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
                     className="fixed inset-0 z-50"
                 >
                     <Spinner />
