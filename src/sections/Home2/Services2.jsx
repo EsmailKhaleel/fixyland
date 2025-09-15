@@ -3,14 +3,15 @@ import BatchText from "../../components/ui/BatchText"
 import ServiceCard2 from "../../components/ServiceCard2"
 import services from "../../data/services"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 function Services2() {
     return (
-        <section className="section-padding bg-primary-light">
+        <section className="relative w-full section-padding bg-primary-light">
             <div className="w-full flex flex-col gap-4 items-center justify-center">
                 <BatchText text="Hotel Services" />
                 <AnimatedText
@@ -19,7 +20,16 @@ function Services2() {
                 />
             </div>
             <Swiper
-                modules={[Autoplay]}
+                modules={[Autoplay, Pagination]}
+                onInit={(swiper) => {
+            swiper.params.pagination.el = ".services-pagination";
+            swiper.pagination.init();
+            swiper.pagination.update();
+          }}
+          pagination={{
+            clickable: true,
+            el: ".services-pagination",
+          }}
                 slidesPerView={1}
                 spaceBetween={15}
                 loop={true}
@@ -49,6 +59,7 @@ function Services2() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className="services-pagination"></div>
         </section>
     )
 }

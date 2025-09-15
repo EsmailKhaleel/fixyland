@@ -40,8 +40,17 @@ function HeroSection2() {
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           slidesPerView={1}
+          onInit={(swiper) => {
+            swiper.params.navigation.prevEl = '.custom-prev';
+            swiper.params.navigation.nextEl = '.custom-next';
+            swiper.navigation.update();
+            swiper.params.pagination.el = ".hero-pagination";
+            swiper.pagination.init();
+            swiper.pagination.update();
+          }}
           pagination={{
-            clickable: true
+            clickable: true,
+            el: ".hero-pagination",
           }}
           loop={true}
           autoplay={{
@@ -91,15 +100,16 @@ function HeroSection2() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="hero-pagination"></div>
       </div>
-      {/* <div className="absolute hidden sm:flex sm:-bottom-26 right-2 gap-2 z-50">
+      <div className="absolute hidden sm:flex sm:-bottom-26 md:-bottom-48 right-2 gap-2 z-50">
         <div className="custom-prev p-4 bg-secondary flex items-center justify-center cursor-pointer text-white hover:bg-primary transition-all duration-500 rounded-full z-50">
           <IoIosArrowDown className="rotate-90 text-xl flex-shrink-0" />
         </div>
         <div className="custom-next p-4 bg-secondary flex items-center justify-center cursor-pointer text-white hover:bg-primary transition-all duration-500 rounded-full z-50">
           <IoIosArrowDown className="-rotate-90 text-xl flex-shrink-0" />
         </div>
-      </div> */}
+      </div>
     </section>
   )
 }

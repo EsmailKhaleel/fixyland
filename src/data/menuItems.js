@@ -3,7 +3,7 @@ const menuItems = [
   {
     label: 'Home',
     children: [
-      { label: 'Home Page', link: '/' },
+      { label: 'Home Page 1', link: '/' },
       { label: 'Home Page 2', link: '/home-2' },
       // { label: 'Home Page 3' },
       // {

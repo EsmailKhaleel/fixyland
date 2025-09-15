@@ -9,6 +9,7 @@ import EventsSection from "../sections/Home2/EventsSection"
 import PlansSection2 from "../sections/Home2/PlansSection2"
 import TestimonialSection2 from "../sections/Home2/TestimonialSection2"
 import StaffSection2 from "../sections/Home2/StaffSection2"
+import NewsSection2 from "../sections/Home2/NewsSection2"
 
 function Home2() {
   return (
@@ -30,6 +31,7 @@ function Home2() {
         <PlansSection2 />
         <TestimonialSection2 />
         <StaffSection2 />
+        <NewsSection2 />
    </main>
   )
 }

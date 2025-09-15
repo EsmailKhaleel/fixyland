@@ -28,17 +28,20 @@ import BlogList from "../pages/BlogList.jsx";
 import BlogSideBar from "../pages/BlogSideBar.jsx";
 import BlogDetails from "../pages/BlogDetails.jsx";
 import ContactUs from "../pages/ContactUs.jsx";
-
 import Home2 from "../pages/Home2.jsx";
+import Footer2 from "../components/Footer/Footer2.jsx";
 
 function Layout() {
   const location = useLocation();
+  const isHome2 = location.pathname !== "/home-2";
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   }, [location.pathname]);
+  
   return (
     <div className="relative w-full h-screen bg-gray-900">
       <RouteLoader />
@@ -55,7 +58,7 @@ function Layout() {
             <Route path="*" element={<NotFound />} />
             <Route index path="/" element={<Home />} />
             <Route path="/home-2" element={<Home2 />} />
-
+            
             <Route path="/booking" element={<Booking />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/restaurant" element={<Restaurant />} />
@@ -79,7 +82,9 @@ function Layout() {
             <Route path="/blog/blog-details" element={<BlogDetails />} />
             <Route path="/contact-us" element={<ContactUs />} />
           </Routes>
-          <Footer />
+          {isHome2 ?
+            <Footer />
+            : <Footer2 />}
         </motion.div>
       </AnimatePresence>
     </div>

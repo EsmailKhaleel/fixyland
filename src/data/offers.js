@@ -8,7 +8,7 @@ const offers = [
     discount: 30,
     title: "Get 30% Off on Hotel Booking",
     direction: "left",
-    delay: 0.4,
+    delay: 0.2,
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const offers = [
     discount: 35,
     title: "Get 35% Off on Resort Booking",
     direction: "right",
-    delay: 0.4,
+    delay: 0.2,
   },
 ];
 

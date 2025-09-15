@@ -56,14 +56,14 @@ export default function AboutSection() {
           humour, or randomised words which don't look even.
         </FadeIn>
 
-        <FadeIn delay={0.4} className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-14">
+        <FadeIn delay={0.2} className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-x-14">
           {aboutInfo.map((info, index) => (
             <CheckItem key={index} icon={FaRegCircleCheck} text={info} />
           ))}
         </FadeIn>
 
         {/* Person info */}
-        <FadeIn delay={0.6} className="flex items-center gap-4 mt-6">
+        <FadeIn delay={0.4} className="flex items-center gap-4 mt-6">
           <img
             src={UserImg}
             alt="CEO"

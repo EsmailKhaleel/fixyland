@@ -10,7 +10,6 @@ import services from "../data/services";
 function Services() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-
   return (
     <section className="w-full relative flex flex-col gap-10 bg-gray-100 section-padding">
       <img src={Bg} alt="bg" className="absolute bottom-0 left-0 w-1/2 h-1/2 object-cover" />
@@ -39,7 +38,7 @@ function Services() {
 
         <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-4">
           {services.slice(0, 4).map((service, index) => (
-            <FadeIn key={index} delay={0.2 + index * 0.1}>
+            <FadeIn key={index} delay={0.1 + index * 0.1}>
               <ServiceCard
                 key={index}
                 service={service}

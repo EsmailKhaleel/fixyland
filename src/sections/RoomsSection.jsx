@@ -7,20 +7,10 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import BatchText from "../components/ui/BatchText";
-import { useEffect, useState } from "react";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 function RoomsSection() {
-    const [width, setWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWidth(window.innerWidth);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    const width = useWindowWidth();
     
     return (
         <>
@@ -51,8 +41,6 @@ function RoomsSection() {
                             disableOnInteraction: false,
                             pauseOnMouseEnter: false,
                         }}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')}
                         className="w-full"
                     >
                         {Rooms.map((room) => (
