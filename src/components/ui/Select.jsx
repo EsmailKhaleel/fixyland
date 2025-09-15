@@ -17,10 +17,10 @@ function Select({
             {label && <label htmlFor={label} className={`font-medium ${labelColor}`}>{label}</label>}
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={`relative rounded-sm px-3 py-3 md:px-4 md:py-4 ${bgColor} text-black w-full focus:outline-none focus:ring-1 focus:ring-primary active:outline-none active:ring-1 active:ring-primary hover:outline-none hover:ring-1 hover:ring-primary transition-all duration-500`}
+                className={`relative h-14 flex items-center rounded-sm px-3 py-3 md:px-4 md:py-4 ${bgColor} text-black w-full focus:outline-none focus:ring-1 focus:ring-primary active:outline-none active:ring-1 active:ring-primary hover:outline-none hover:ring-1 hover:ring-primary transition-all duration-500`}
             >
                 <div
-                    className="flex items-center justify-between text-nowrap"
+                    className={`${selectedOption ? "text-black" : "text-gray-500"} flex items-center justify-between text-nowrap`}
                 >
                     {selectedOption || defaultValue}
                 </div>
