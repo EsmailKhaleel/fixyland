@@ -28,9 +28,9 @@ function Accordion({ isOpen, setIsOpen, question, answer }) {
                     </span>
 
                     {isOpen === question ? (
-                        <FaMinus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} group-hover:text-white z-10`} />
+                        <FaMinus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} z-10`} />
                     ) : (
-                        <FaPlus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} group-hover:text-white z-10`} />
+                        <FaPlus className={`w-4 h-4 text-black ${isOpen === question ? "text-white" : ""} z-10`} />
                     )}
                 </motion.div>
             </div>

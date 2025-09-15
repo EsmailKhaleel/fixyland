@@ -12,7 +12,7 @@ function OffersSection() {
                 textColor="black"
                 className="heading-text justify-center text-center font-extrabold"
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
                 {offers.map((offer) => (
                     <OfferCard key={offer.id} {...offer} />
                 ))}

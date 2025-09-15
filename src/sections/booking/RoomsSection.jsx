@@ -28,7 +28,7 @@ function RoomsSection() {
                                     ? 3
                                     : width >= 960
                                         ? 2
-                                        : 1
+                                        : width >= 640 ? 1.5 : 1
                             }
                             scrollbar={{ draggable: true }}
                             autoplay={{

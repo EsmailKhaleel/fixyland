@@ -15,7 +15,7 @@ const letter = {
     visible: { opacity: 1, x: 0, scale: 1, transition: { type: "spring", stiffness: 50, damping: 12 } },
 };
 
-function AnimatedText({ text, textColor = "black", className = "", delay = 0 }) {
+function AnimatedText({ text, textColor = "black", className = "", delay = 0, viewport = { once: true } }) {
     // Split the text into an array of words
     const words = text.split(" ");
     
@@ -25,7 +25,7 @@ function AnimatedText({ text, textColor = "black", className = "", delay = 0 }) 
             variants={container(delay)}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={viewport}
         >
             {words.map((word, wordIndex) => (
                 <span key={wordIndex} className="inline-block whitespace-nowrap mr-2">

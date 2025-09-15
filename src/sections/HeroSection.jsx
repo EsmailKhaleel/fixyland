@@ -20,7 +20,7 @@ function HeroSection() {
                     Book With Best
                     <AnimatedText text={text} textColor='secondary' className="text-secondary" />
                 </h1>
-                <p className="text-lg max-w-[350px] md:max-w-3xl">
+                <p className="text-lg max-w-[350px] md:max-w-2xl lg:max-w-3xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc Duis egestas ac ante sed tincidunt.
                 </p>
                 <div className="flex gap-4 justify-center flex-col sm:flex-row items-center">

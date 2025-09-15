@@ -12,10 +12,8 @@ import { Autoplay } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import TestimonialCard from '../components/TestimonialCard'
-import useWindowWidth from '../hooks/useWindowWidth'
 
 function TestimonialSection() {
-    const width = useWindowWidth();
     return (
         <div className="bg-gray-100 w-full grid grid-cols-1 xl:grid-cols-2 items-center justify-start gap-22 lg:gap-24 xl:gap-36 py-28 section-padding">
             <div className='relative'>
@@ -28,15 +26,13 @@ function TestimonialSection() {
                 <motion.div
                     animate={{ y: [0, 10 , 0] }}
                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                    className='absolute -bottom-10 sm:bottom-10 md:bottom-20 right-2 sm:-right-4 md:-right-8 lg:-right-10 xl:-right-20 border-4 border-white w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-xl overflow-hidden'>
+                    className='absolute -bottom-10 sm:bottom-10 md:bottom-20 right-2 sm:-right-4 md:-right-8 lg:-right-10 xl:-right-20 border-4 border-white w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-xl'>
                     <motion.div
-                        initial={{ 
-                            x: width < 768 ? 100 : 200
-                        }}
-                        whileInView={{ x: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="w-full h-full bg-red"
+                        initial={{ translateX: "-100%" }}
+                        whileInView={{ translateX: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="w-full h-full overflow-hidden rounded-xl"
                     >
                         <img src={Img2} alt="Luxury Hotel" className="w-full h-full object-cover" />
                     </motion.div>

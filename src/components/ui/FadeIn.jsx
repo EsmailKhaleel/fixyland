@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 
-const FadeIn = ({ children, className, delay = 0, duration = 0.5, direction = "up" }) => (
+const FadeIn = ({ children, className, delay = 0, duration = 0.5, direction = "up", viewport = { once: true, amount: 0.2 } }) => (
   <motion.div
     initial={{
       opacity: 0,
-      y: direction === "up" ? 20 : direction === "down" ? -20 : 0,
-      x: direction === "left" ? 20 : direction === "right" ? -20 : 0
+      y: direction === "up" ? 30 : direction === "down" ? -30 : 0,
+      x: direction === "left" ? 30 : direction === "right" ? -30 : 0
     }}
     whileInView={{ opacity: 1, y: 0, x: 0 }}
     transition={{ duration, delay }}
-    viewport={{ once: true, amount: 0.2 }}
+    viewport={viewport}
     className={className}
   >
     {children}

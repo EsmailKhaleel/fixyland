@@ -26,7 +26,7 @@ export default function AboutSection() {
           className="w-full h-auto object-cover"
         />
         {/* Star + circular text */}
-        <div className="absolute top-[50%] translate-y-[-50%] -right-0 sm:-right-16 w-40 h-40 rounded-full flex justify-center items-center shadow-lg">
+        <div className="absolute top-[50%] translate-y-[-50%] -right-0 lg:-right-16 w-40 h-40 rounded-full flex justify-center items-center shadow-lg">
           <div className="relative w-full h-full flex justify-center items-center bg-white rounded-full p-4">
             <div className="bg-primary w-1/2 h-1/2 rounded-full flex justify-center items-center relative z-10">
               <img src={StarIcon} className="w-8 h-8 transform transition-transform duration-500 ease-in-out rotate-0 cursor-pointer hover:rotate-180" />

@@ -28,7 +28,7 @@ function CallNowCard() {
                     <span className="text-base">Mon-Fri: 7:00 am - 9:00 pm</span>
                     <span className="text-base">24/7 Service Available</span>
                 </div>
-                <FadeIn direction="right" delay={0.6}>
+                <FadeIn direction="right" delay={0.2}>
                     <MainButton
                         label="Call Us Now"
                         color="secondary"

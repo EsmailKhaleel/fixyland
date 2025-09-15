@@ -25,6 +25,7 @@ const slides = [
     subTitle: "Place To Stay"
   },
 ]
+const viewPort = { once: false, amount: 0.2 };
 function HeroSection2() {
   return (
     <section className="absolute inset-0 h-screen flex items-center justify-start">
@@ -71,7 +72,7 @@ function HeroSection2() {
                   <BatchText text="Best Luxury Hotel & Resort" />
                 </div>
                 <div className="flex flex-col gap-0">
-                  <FadeIn direction="down">
+                  <FadeIn direction="down" viewport={viewPort}>
                     <h1 className="text-4xl sm:text-5xl md:text-[80px] font-bold">
                       {slide.title}
                     </h1>
@@ -80,14 +81,15 @@ function HeroSection2() {
                     text={slide.subTitle}
                     textColor='secondary'
                     className="text-secondary text-4xl sm:text-5xl md:text-[80px] font-bold"
+                    viewport={viewPort}
                   />
                 </div>
-                <FadeIn direction="up">
+                <FadeIn direction="up" viewport={viewPort}>
                   <p className="text-lg max-w-[350px] md:max-w-3xl">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet rhoncus nunc Duis egestas ac ante sed tincidunt.
                   </p>
                 </FadeIn>
-                <FadeIn direction="up" className='self-start'>
+                <FadeIn direction="up" className='self-start' viewport={viewPort}>
                   <MainButton
                     label="Contact Us"
                     color="white"

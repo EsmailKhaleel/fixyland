@@ -18,7 +18,7 @@ function HorizontalRoomCard({ room }) {
                 <img
                     src={room.image}
                     alt={room.title}
-                    className="w-full h-[350px] md:h-72 object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-transform duration-500 ease-in-out"
+                    className="w-full h-[350px] md:h-[320px] object-cover transform group-hover:scale-110 group-hover:-rotate-3 group-focus:scale-110 group-focus:-rotate-3 group-active:scale-110 group-active:-rotate-3 transition-transform duration-500 ease-in-out"
                     draggable={false}
                 />
                 <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:animate-ripple group-hover:opacity-0 group-[.not-hover]:animate-rippleReverse group-active:animate-ripple group-active:opacity-0 origin-center"></span>
