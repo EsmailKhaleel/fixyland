@@ -55,7 +55,7 @@ function Layout() {
           className="relative"
           initial={{ clipPath: "inset(0 50% 0 50%)" }}  // hidden (collapsed at center)
           animate={{ clipPath: "inset(0% 0% 0% 0%)" }} // fully revealed
-          transition={{ duration: 2, ease: "backOut", delay: 1 }}
+          transition={{ duration: 2, ease: "backOut", delay: 1.75 }}
         >
           <Navbar />
           <Routes>
