@@ -11,14 +11,19 @@ import FadeIn from "../../components/ui/FadeIn";
 import Amenities from "../../components/Amenities";
 import TitleDescription from "../../components/TitleDescription";
 import CheckItem from "../../components/ui/CheckItem";
+import AnimatedImage2 from "../../components/ui/AnimatedImage2";
 
 function RoomData() {
     const sectionRef = useRef(null);
     return (
         <div className="bg-gray-100 w-full flex flex-col gap-6 md:gap-10 p-4 sm:p-6 lg:p-10 rounded-lg">
-
-            <img src={roomDetails.image} alt={roomDetails.title} className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] object-cover rounded-lg" />
-
+            <AnimatedImage2
+                src={roomDetails.image}
+                alt={roomDetails.title}
+                wrapperClass={"w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] rounded-lg overflow-hidden"}
+                className={"w-full h-full object-cover"}
+                bgColor='bg-gray-100'
+            />
             <div className="flex flex-col gap-3">
                 <AnimatedText
                     text={"Luxury Double Bed"}
@@ -84,7 +89,7 @@ function RoomData() {
                     <span className="font-semibold text-gray-600 text-lg">Policies</span>
                     <ul className="list-disc pl-6 flex flex-col gap-2">
                         {roomDetails.rules.policies.map((policy, index) => (
-                            <CheckItem  key={index} icon={FaRegCircleCheck} text={policy}/>
+                            <CheckItem key={index} icon={FaRegCircleCheck} text={policy} />
                         ))}
                     </ul>
                 </div>
