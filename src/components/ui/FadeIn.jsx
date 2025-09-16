@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const FadeIn = ({ children, className, delay = 0, duration = 0.5, direction = "up", viewport = { once: true, amount: 0.2 } }) => (
+const FadeIn = ({ children, className, delay = 0.1, duration = 0.5, direction = "up", viewport = { once: true, amount: 0.2 } }) => (
   <motion.div
     initial={{
       opacity: 0,

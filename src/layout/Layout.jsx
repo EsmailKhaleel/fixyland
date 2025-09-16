@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Route, Routes, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -33,7 +33,7 @@ import Footer2 from "../components/Footer/Footer2.jsx";
 
 function Layout() {
   const location = useLocation();
-  const isHome2 = location.pathname === "/home-2";
+  const [isHome2, setIsHome2] = useState(location.pathname === "/home-2");
 
   useEffect(() => {
     window.scrollTo({
@@ -41,7 +41,11 @@ function Layout() {
       behavior: "smooth"
     });
   }, [location.pathname]);
-  
+
+  useEffect(() => {
+    setIsHome2(location.pathname === "/home-2");
+  }, [location.pathname]);
+
   return (
     <div className="relative w-full h-screen bg-gray-900">
       <RouteLoader />
